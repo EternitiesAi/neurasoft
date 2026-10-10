@@ -12,7 +12,7 @@ class EditionTests(unittest.TestCase):
         for study in studies:
             text = (ROOT / 'dist/studies' / study['slug'] / 'index.html').read_text(encoding='utf-8')
             for field in ('setup', 'intervention', 'result', 'limit', 'next'):
-                self.assertIn(study[field], text)
+                self.assertIn(study[field].replace('Luna', 'L.U.N.A'), text)
             self.assertIn('Evidence & access', text)
 
     def test_full_content_index_has_no_site_chrome_or_private_refs(self):

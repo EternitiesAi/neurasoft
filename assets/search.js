@@ -1,7 +1,7 @@
 /* Shared by the actual page and its dependency-free tests. */
 ((root) => {
   'use strict';
-  const normalize = value => String(value || '').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  const normalize = value => String(value || '').normalize('NFKC').toLowerCase().replace(/\bl\.u\.n\.a\.?/g, 'luna').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
   function searchPages(pages, query, limit = 12) {
     const phrase = normalize(query);
     const words = phrase.split(/\s+/).filter(Boolean);
