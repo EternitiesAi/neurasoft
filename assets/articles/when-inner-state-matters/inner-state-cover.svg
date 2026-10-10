@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">When a machine’s inner state starts to matter</title>
+<desc id="desc">Conceptual interwoven paths connect memory, internal state, action and returning consequences. Not a measured neural trace.</desc>
+<defs>
+ <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#f8f5eb"/><stop offset="1" stop-color="#e6eee4"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#bdcdbb" stop-opacity=".6"/><stop offset="1" stop-color="#bdcdbb" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#577960" opacity=".18"/></pattern>
+ <style>text{font-family:Arial,Helvetica,sans-serif;fill:#203b34}.serif{font-family:Georgia,serif}.muted{fill:#536c5e}</style>
+</defs>
+<rect width="1200" height="630" fill="url(#paper)"/>
+<rect x="644" width="556" height="630" fill="url(#grid)"/>
+<circle cx="935" cy="322" r="270" fill="url(#glow)"/>
+<g fill="none" stroke-linecap="round">
+ <path d="M747 133 C1150 94 1155 545 774 524" stroke="#bdcbb9" stroke-width="2"/>
+ <path d="M770 190 C1023 100 1082 310 854 343 S801 565 1098 480" stroke="#577960" stroke-width="8"/>
+ <path d="M714 420 C982 512 1046 160 890 186 S780 384 1118 343" stroke="#63888c" stroke-width="8"/>
+ <path d="M753 302 C843 238 1013 487 1124 186" stroke="#b98369" stroke-width="6"/>
+ <path d="M1115 456 C1186 557 794 578 713 352" stroke="#577960" stroke-width="3" stroke-dasharray="7 10"/>
+ <circle cx="938" cy="326" r="80" stroke="#e0e8d7" stroke-width="36"/>
+ <circle cx="938" cy="326" r="80" stroke="#496f55" stroke-width="1.5"/>
+</g>
+<circle cx="770" cy="190" r="12" fill="#577960"/><circle cx="714" cy="420" r="12" fill="#63888c"/><circle cx="1124" cy="186" r="12" fill="#b98369"/>
+<text x="719" y="156" font-size="18" letter-spacing="2">MEMORY</text>
+<text x="703" y="464" font-size="18" letter-spacing="2">STATE</text>
+<text x="1040" y="152" font-size="18" letter-spacing="2">CHOICE</text>
+<text x="819" y="593" font-size="15" class="muted" letter-spacing="2">CONCEPTUAL · NOT A BRAIN SCAN</text>
+<text x="64" y="78" font-size="18" letter-spacing="3" class="muted">NEURASOFT / FROM THE LABORATORY</text>
+<text x="64" y="194" font-size="60" class="serif">When a machine’s</text>
+<text x="64" y="276" font-size="60" class="serif">inner state</text>
+<text x="64" y="358" font-size="60" class="serif">starts to matter</text>
+<path d="M66 397 H564" stroke="#b98369" stroke-width="4"/>
+<text x="64" y="452" font-size="24" class="muted">What does the inside actually change?</text>
+<text x="64" y="576" font-size="18" class="muted">Feedback · Emotion mechanisms · Consequence</text>
+</svg>

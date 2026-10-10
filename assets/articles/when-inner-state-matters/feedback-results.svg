@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="890" viewBox="0 0 800 890" role="img" aria-labelledby="title desc">
+<title id="title">Three comparisons, one important limit</title><desc id="desc">Internal preregistered study of 32 rate networks. Feedback dose 31 of 32, median ratio 1.70, passed. Local-loop-only comparison 29 of 32, 2.44, passed. Fully feedforward comparison 26 of 32, 1.24, failed. Response density was matched; spatial reach was not.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#203b34}.serif{font-family:Georgia,serif}.small{font-size:19px;fill:#536c5e}.label{font-size:24px}.big{font-size:56px;font-family:Georgia,serif}</style>
+<rect width="800" height="890" fill="#f5f2e9"/>
+<text x="42" y="53" font-size="17" letter-spacing="2" fill="#54775f">NEURASOFT / REPORTED RESULTS</text>
+<text x="42" y="108" font-size="39" class="serif">What returning signals changed</text>
+<text x="42" y="148" class="small">Preregistration 003 · 32 rate networks · One architecture</text>
+<g stroke="#bcc9bb" fill="#e7ede2"><rect x="36" y="182" width="728" height="163" rx="12"/><rect x="36" y="362" width="728" height="163" rx="12"/></g>
+<rect x="36" y="542" width="728" height="163" rx="12" fill="#f0e6dc" stroke="#c4b3a5"/>
+<text x="60" y="225" class="label">More backward feedback</text>
+<text x="60" y="270" class="small">Positive dose association</text>
+<text x="60" y="309" font-size="18">Passed its prespecified rule</text>
+<text x="505" y="261" class="big">31/32</text>
+<text x="505" y="309" class="small">Median ratio 1.70</text>
+<text x="60" y="405" class="label">Versus local loops only</text>
+<text x="60" y="450" class="small">Original response complexity higher</text>
+<text x="60" y="489" font-size="18">Passed · 3 unmatched counted against</text>
+<text x="505" y="441" class="big">29/32</text>
+<text x="505" y="489" class="small">Median ratio 2.44</text>
+<text x="60" y="585" class="label">Versus fully feedforward</text>
+<text x="60" y="630" class="small">Original response complexity higher</text>
+<text x="60" y="669" font-size="18">Failed · Needed 28/32 and ratio 1.30</text>
+<text x="505" y="621" class="big">26/32</text>
+<text x="505" y="669" class="small">Median ratio 1.24</text>
+<path d="M42 744 H758" stroke="#bcc9bb"/>
+<text x="42" y="785" font-size="23">Matched activity and response density.</text>
+<text x="42" y="820" font-size="23">Not matched spatial reach. Not sentience grades.</text>
+<text x="42" y="860" font-size="17" fill="#536c5e">Independent reproduction remains open. See the public methods note.</text>
+</svg>
