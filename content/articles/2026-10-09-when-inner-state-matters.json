@@ -65,7 +65,7 @@
     }
   ],
   "sources": [
-    {"id": 1, "title": "Neurasoft research note: feedback, integration instruments and tension mechanisms (9 October 2026)", "url": "https://neurasoft.us/assets/research/2026-10-09-inner-state-study-note.md", "note": "Curated methods and results from internal frozen reports. Includes preregistered outcomes, post-hoc reach limits, exact-reference disagreements and exploratory replicate limits. Not an independent reproduction; full code and run archives are not released here."},
+    {"id": 1, "title": "Neurasoft research note: feedback, integration instruments and tension mechanisms (9 October 2026)", "url": "https://neurasoft.us/assets/research/2026-10-09-inner-state-study-note.md", "note": "Curated methods and results from internal research reports. Includes preregistered outcomes, post-hoc reach limits, exact-reference disagreements and exploratory replicate limits. Not an independent reproduction; full code and run archives are not released here."},
     {"id": 2, "title": "Casali et al. (2013), A theoretically based index of consciousness independent of sensory processing and behavior", "url": "https://pubmed.ncbi.nlm.nih.gov/23946194/", "note": "Primary human TMS–EEG PCI study. Background for perturbational methods, not validation of Neurasoft’s software instrument."},
     {"id": 3, "title": "Mayner et al. (2018), PyPhi: A toolbox for integrated information theory", "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006343", "note": "Primary description of the IIT mathematical software used as a formal reference. Agreement with a theory-specific calculation is distinct from consciousness ground truth."}
   ],
