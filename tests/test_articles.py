@@ -13,6 +13,26 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ArticleTests(unittest.TestCase):
+    def test_requested_social_times_are_held_not_mistaken_for_a_scheduler(self):
+        # Regression: publishing all same-day website pages must not erase a
+        # deliberate social hold or turn a requested time into confirmed delivery.
+        cases = [
+            ('a-laboratory-that-can-tell-itself-no', 'auto', None),
+            ('what-earns-the-next-choice', 'review', '2026-10-14T21:00:00Z'),
+            ('the-three-crowns', 'review', '2026-10-15T00:00:00Z'),
+        ]
+        for slug, mode, not_before in cases:
+            with self.subTest(slug=slug):
+                packet=json.loads((ROOT/'dist/articles'/slug/'grok-packet.json').read_text(encoding='utf-8'))
+                self.assertEqual(packet['publish'], mode)
+                self.assertIn('social_request', packet)
+                self.assertEqual(packet['social_request'].get('not_before'), not_before)
+                self.assertEqual(packet['social_request']['timezone'], 'America/Chicago')
+                self.assertEqual(packet['social_publication_status'], 'prepared-not-confirmed')
+                if mode=='review':
+                    self.assertEqual(packet['social_request']['status'], 'held-pending-scheduler-confirmation')
+                    self.assertIn('Do not publish this held packet', packet['instructions'])
+
     def test_latest_is_on_homepage_and_all_articles_are_searchable(self):
         articles = load_articles(ROOT)
         home = (ROOT/'dist/index.html').read_text(encoding='utf-8')

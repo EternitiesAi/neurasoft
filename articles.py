@@ -33,6 +33,8 @@ def load_articles(root, today=None):
         for field in ('title', 'summary', 'author', 'editorial_note'):
             if not isinstance(a[field], str) or not a[field].strip():
                 raise ValueError('Empty article field: ' + field)
+        if a.get('social_publish', 'auto') not in ('auto', 'review'):
+            raise ValueError('Invalid social publication disposition')
         for name in [a['hero']] + [s['figure'] for s in a['sections'] if 'figure' in s]:
             if not re.fullmatch(r'[a-z0-9-]+', name):
                 raise ValueError('Invalid image name')
@@ -107,6 +109,12 @@ def finish(b):
         for f in figures:
             f['url'] = b.BASE+'/assets/articles/'+a['slug']+'/'+f['file']
         packet = {'schema':'neurasoft-editorial-packet-v1','id':a['date']+'-'+a['slug'],'title':a['title'],'publish':'auto','date':a['date'], 'canonical_url':b.BASE+route(a),'markdown_url':b.BASE+route(a)+'article.md','images':figures,'x_post':a['x_post']+'\n'+b.BASE+route(a),'linkedin_post':a['linkedin_post']+'\n'+b.BASE+route(a),'social_publication_status':'prepared-not-confirmed','instructions':'Publish this original article with cover and inline images in the indicated order. Use native X Article if available; otherwise publish the supplied short post linking to Neurasoft. Publish the LinkedIn adaptation with the cover and canonical link. Check account queue for this packet id and URL before posting. Do not invent research results or remove the conceptual-diagram labels. Record returned post URLs; do not treat receipt of this packet as publication.'}
+        packet['publish'] = a.get('social_publish', 'auto')
+        if a.get('social_request'):
+            packet['social_request'] = a['social_request']
+            packet['instructions'] += ' The social_request is a requested delivery plan, not proof of scheduling or publication. Verify the configured account and actual scheduler receipt separately; never post before a stated not_before instant.'
+        if packet['publish'] == 'review':
+            packet['instructions'] = 'Do not publish this held packet. A publisher must first confirm the requested account and scheduling route and explicitly release the hold. ' + packet['instructions'].replace('Publish this original article', 'Once released, publish this original article', 1)
         if a.get('version'):
             packet.update(revision=a['version'], updated_at=a.get('updated_at',a['date']))
             packet['instructions'] += ' This is a revision of the same packet identity. If already published, update the existing article where supported; do not create a duplicate social post.'
