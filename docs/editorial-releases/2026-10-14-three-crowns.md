@@ -61,4 +61,4 @@ Primary external background checked: Butlin/Long etal.2023 arXiv2308.08708v3; Bu
 
 Frontier check:2026-10-14 | sweep:`daily-2026-10-13-frontier-sweep.md@3fd60d1a9bad14f01156b56c04fa5b359ef6d88f` | index:`527dc1ef575f1677813214b77fa7d9e62f23ca9e` | lane:Neurasoft editorial | result: use current internal evidence and primary-source background; no vendor claim adopted without verification; no new study authorized.
 
-All owned local browser/server/test/deployment processes exited. Colleague editorial work completed. No live L.U.N.A/Resident body, model campaign, research job, credential value, install, provider fallback, merge or automation change occurred.
+All owned local browser/server/test/deployment processes exited. Colleague editorial work completed. No live L.U.N.A/Resident body operation, model campaign, research job, install, provider fallback, merge or automation change occurred. Existing authenticated CLIs were used; no credential values were printed, copied into artifacts or published.
