@@ -163,7 +163,7 @@ def build():
  print(f'Built {len(ROUTES)} pages, {len(NOTES)} research notes -> {OUT}')
 
 if __name__=='__main__':
- import sys, publication, edition_three, articles, branding, resident_programme, inception
+ import sys, publication, edition_three, articles, branding, resident_programme, inception, titles
  publication.install(sys.modules[__name__])
  edition_three.install(sys.modules[__name__])
  resident_programme.install(sys.modules[__name__])
@@ -174,3 +174,4 @@ if __name__=='__main__':
  articles.finish(sys.modules[__name__])
  resident_programme.finish(sys.modules[__name__])
  branding.finish(sys.modules[__name__])
+ titles.finish(sys.modules[__name__])
