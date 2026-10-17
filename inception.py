@@ -2,8 +2,12 @@
 
 BADGE = '/assets/brand/nvidia-inception-program-badge.svg'
 LINE = 'Neurasoft is part of Eternities, a member of the NVIDIA Inception program.'
-BLOCK = ('<div class="footer-inception"><img src="' + BADGE + '" alt="NVIDIA Inception program badge" width="139" height="60"'
-         ' loading="lazy" decoding="async"><p>' + LINE + '</p></div>')
+# NVIDIA's "Writing About the Program": wherever the logo appears, this legal line appears too, exactly
+LEGAL = ('© 2026 NVIDIA, the NVIDIA logo, and NVIDIA Inception are trademarks and/or registered trademarks of NVIDIA '
+         'Corporation in the U.S. and other countries.')
+BLOCK = ('<div class="footer-inception"><div class="footer-inception-row"><img src="' + BADGE + '" alt="NVIDIA Inception program badge"'
+         ' width="139" height="60" loading="lazy" decoding="async"><p>' + LINE + '</p></div>'
+         '<p class="footer-inception-legal">' + LEGAL + '</p></div>')
 MARKER = '<div class="footer-bottom">'
 
 

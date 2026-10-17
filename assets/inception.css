@@ -1,2 +1,2 @@
-.footer-inception{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:56px}.footer-inception img{height:60px;width:auto;display:block}.footer-inception p{font-size:13px;line-height:1.5;opacity:.72;max-width:420px;margin:0}
-@media(max-width:520px){.footer-inception{margin-top:40px;gap:14px}}
+.footer-inception{margin-top:56px}.footer-inception-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.footer-inception img{height:60px;width:auto;display:block}.footer-inception-row p{font-size:13px;line-height:1.5;opacity:.72;max-width:420px;margin:0}.footer-inception-legal{font-size:11px;line-height:1.5;opacity:.5;max-width:640px;margin:12px 0 0}
+@media(max-width:520px){.footer-inception{margin-top:40px}.footer-inception-row{gap:14px}}
