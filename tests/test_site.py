@@ -20,7 +20,7 @@ class SiteTests(unittest.TestCase):
   from articles import load_articles
   articles=load_articles(ROOT)
   paper_pages={a['paper_url'] for a in articles if a.get('paper_url')}
-  self.assertEqual(len(self.pages),37+1+len(articles)+len(paper_pages))
+  self.assertEqual(len(self.pages),37+1+1+len(articles)+len(paper_pages))
  def test_7_full_journal_notes(self):self.assertEqual(len(list((DIST/'journal').glob('*/index.html'))),7)
  def test_every_page_has_one_h1(self):
   for p,d in self.docs.items():self.assertEqual(sum(t=='h1' for t,a in d.tags),1,str(p))
@@ -71,7 +71,7 @@ class SiteTests(unittest.TestCase):
   for row in json.loads((DIST/'assets/search-index.json').read_text(encoding='utf-8')):self.assertTrue((DIST/row['url'].strip('/')/'index.html').exists())
  def test_sitemap_xml(self):
   from articles import load_articles
-  tree=ET.parse(DIST/'sitemap.xml');self.assertEqual(len(list(tree.getroot())),36+1+len(load_articles(ROOT)))
+  tree=ET.parse(DIST/'sitemap.xml');self.assertEqual(len(list(tree.getroot())),36+1+1+len(load_articles(ROOT)))
  def test_publish_directory(self):
   config=tomllib.loads((ROOT/'netlify.toml').read_text(encoding='utf-8'));self.assertEqual(config['build']['publish'],'dist')
  def test_csp(self):self.assertIn("default-src 'self'",(DIST/'_headers').read_text(encoding='utf-8'))

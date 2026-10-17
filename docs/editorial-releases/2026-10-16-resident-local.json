@@ -1,0 +1,38 @@
+{
+  "base_commit": "d84e0a414a01b7ed66e053f720be6e2ef709f228",
+  "previous_production": "ad95388e-ac24-47c3-949a-1ad7ba2b8abf",
+  "tests": {
+    "python": 49,
+    "javascript": 7,
+    "passed": 56
+  },
+  "browser": {
+    "viewports": [
+      1440,
+      390,
+      900
+    ],
+    "resident_mobile_overflow": false,
+    "desktop_overflow": false,
+    "mobile_search": "sentient returned programme first",
+    "mobile_navigation": "Resident present",
+    "homepage": "Resident programme plus preserved Three Crowns feature",
+    "console_errors": 0
+  },
+  "baseline_comparison": {
+    "files": 163,
+    "matches": 159,
+    "newline_only_differences": [
+      "assets/articles.css",
+      "assets/articles/where-does-your-body-end/body-border-cover.svg",
+      "assets/articles/where-does-your-body-end/prosthesis-conversation.svg",
+      "assets/articles/where-does-your-body-end/three-useful-borders.svg"
+    ]
+  },
+  "source_sha256": {
+    "resident_programme.py": "de9070a3e685768cc0e5780027df0d8d36aaa358bbb89bc80d5f38a05cf347eb",
+    "content\\resident-programme.html": "7819daaa3f7e6d93ec64af8730a5b060ceddc14dcf7f07e4cf86d0a52b210e6c",
+    "assets\\resident.css": "67369b7539a945fa828ce3f2e4464a6f633b08cdff367a85def257962fa1e87a",
+    "build.py": "c3dac6a464457a562ff246f1d2af14eeb6f5fb2a2d29835a145093d5729d7863"
+  }
+}
