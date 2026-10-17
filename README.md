@@ -1,5 +1,11 @@
 # Neurasoft — Research Publication / Edition 3
 
+**Resident programme, published 16 October 2026:** [neurasoft.us/resident/](https://neurasoft.us/resident/).
+Read [the release record](docs/editorial-releases/2026-10-16-resident.md) before the historical edition notes below.
+The production source is on `publication/resident-programme-20261016`, descended from the October 14 editorial release.
+The repository's older `main` branch does not contain the current public site. Do not deploy it over production.
+`resident_programme.py` and `content/resident-programme.html` own this section; `assets/resident.css` owns its presentation.
+
 **Daily illustrated articles:** see [EDITORIAL.md](EDITORIAL.md) for the September 24
 editorial lane, daily publishing, visual standards, Grok Bot packets and exact
 release receipts. `articles.py` now runs after the historical edition described below.
