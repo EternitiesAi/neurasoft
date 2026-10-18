@@ -11,7 +11,8 @@ class ResidentTests(unittest.TestCase):
     def test_programme_is_discoverable_without_replacing_editorial_work(self):
         home = (DIST / 'index.html').read_text(encoding='utf-8')
         self.assertIn('href="/resident/"', home)
-        self.assertIn('href="/articles/the-three-crowns/"', home)
+        # the homepage keeps its editorial feature beside the Resident teaser (it shows the newest article, which changes)
+        self.assertIn('class="dispatch-feature wrap"', home)
         page = (DIST / 'resident/index.html').read_text(encoding='utf-8')
         self.assertIn('href="/resident/" aria-current="page"', page)
         for route in ('research', 'luna', 'psyche-lab', 'ideas'):

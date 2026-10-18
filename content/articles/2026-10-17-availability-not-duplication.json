@@ -1,0 +1,80 @@
+{
+  "slug": "availability-not-duplication",
+  "status": "publish",
+  "title": "Availability, not duplication",
+  "summary": "When does a shared stage help a mind? In a frozen simulation, copying chosen content into every part of a mind never paid. Holding it in one shared place that every part could read did, when the place was large and the choice of what went in was good.",
+  "date": "2026-10-17",
+  "published_at": "2026-10-18T01:00:21Z",
+  "social_publish": "review",
+  "author": "Neurasoft research",
+  "kind": "Research / Architecture of continuing minds",
+  "read": "5 min",
+  "hero": "cover",
+  "hero_alt": "Twelve dark points arranged in a ring, each joined by a faint dotted line to one shared stage in the centre. A conceptual illustration of availability, not an observed neural or system trace.",
+  "intro": [
+    "Many theories of mind give one idea a central role: a shared stage. Out of everything a mind is processing, one content at a time is selected and made available to every part at once. If something like that matters, it should matter for the minds we build too.",
+    "So we asked a narrow, testable version of the question. In a simulated mind with twelve specialist parts, does a selected shared stage beat an ordinary rival that simply learns whom to ask, when both get exactly the same budget? We fixed the rules before every run and kept every negative."
+  ],
+  "sections": [
+    {
+      "heading": "The world",
+      "paragraphs": [
+        "Each of twelve faculties learns facts in its own domain and keeps them in a private memory that is small and fades. Some facts will later be needed by a different faculty, but nobody knows which in advance; each faculty can only judge, with noise, how important a fact seems.",
+        "A simulated life runs through ordinary days, a correction in which some facts change, and a capability loss in which one faculty's memory halves. The ordinary rival learns which faculties answered its past questions and may ask at most two each time. Every result compares the same simulated lives, one hundred per condition, across a grid of conditions written down in advance."
+      ]
+    },
+    {
+      "heading": "First result: copying never paid",
+      "paragraphs": [
+        "In the first design, the stage wrote its chosen fact into every faculty's memory. Across 27 conditions it never beat the rival, and it did worse in 20 of them. The reason is plain once seen: a copied fact takes room that each faculty needed for its own work. Sharing everything with everyone cost more than it gave.",
+        "A version inspired by a new primate study, in which the stage alternated between its two leading contents from one moment to the next, did worse still, and it made revision after a changed fact worse in every condition."
+      ]
+    },
+    {
+      "heading": "Second result: availability did",
+      "paragraphs": [
+        "The strongest remaining version keeps the selected content in one shared store that any faculty can read, without copying it anywhere. The rival received the same amount of memory, spread as private space among the faculties.",
+        "Now the stage paid in 5 of 36 conditions, by five to eight points of total score, and it never did worse. Every win needed two things together: a large stage and good judgement about what to put in it. Its advantage grew with the stage's size and faded as importance judgements got noisier. A stage filled at random was worse than the selected one in every condition, so the effect comes from selection, not from sharing alone."
+      ],
+      "figure": "stage-advantage",
+      "figure_alt": "Line chart. The shared stage's advantage over the same memory kept private rises with the stage's size (12, 24, 48 items) and is highest when importance judgements are least noisy, crossing the frozen +0.05 bar only for the largest stage with accurate judgement.",
+      "caption": "Mean advantage of the selected shared stage over private memory, averaged over memory size and how much knowledge had to cross between faculties. Individual conditions passed the frozen bar in 5 of 36 cases."
+    },
+    {
+      "heading": "What we got wrong",
+      "paragraphs": [
+        "We predicted that the stage would matter most when faculties needed a lot of each other's knowledge. It did not: how much knowledge had to cross made no difference to any verdict. We also predicted that keeping an alternative interpretation alive would help a mind revise when the world changed. In both worlds it did the opposite."
+      ]
+    },
+    {
+      "heading": "What it means, and what it does not",
+      "paragraphs": [
+        "For anyone building a continuing artificial mind, the lesson is specific: a shared workspace is worth having when it works as a store that every part can read and when the judgement of what enters it is good. Broadcasting copies into every module is not. Better judgement of what matters is the lever that turns availability into benefit.",
+        "This is one simplified world with one design for each mechanism. It says nothing about experience or consciousness, and it is not a claim about any living brain. The code, the frozen rules, both pilot worlds and every result, including the negatives, are public so that anyone can check or break it."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Neurasoft: availability, not duplication (code, frozen rules, pilots and all results)",
+      "url": "https://github.com/EternitiesAi/availability-not-duplication",
+      "note": "Two frozen grids: 27 conditions with copying and 36 with a shared readable store, 100 simulated lives each, paired comparisons."
+    },
+    {
+      "id": 2,
+      "title": "Hesse, Lanfranchi, McGrory, Shi, Engel and Tsao: Rapid alternation of conscious and suppressed stimulus representations in the primate brain (bioRxiv preprint, 2026)",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.15.759299v1",
+      "note": "The primate study that inspired the alternating version of the stage. Our result concerns a simulated mechanism, not their data."
+    },
+    {
+      "id": 3,
+      "title": "Neurasoft: a ground-truth check of the micro-epoch analysis",
+      "url": "https://github.com/EternitiesAi/micro-epoch-audit",
+      "note": "Our companion simulation of what that study's tests can and cannot distinguish."
+    }
+  ],
+  "editorial_note": "Original Neurasoft research writing. The simulation, its frozen rules and all results are public at the first source. The cover is a conceptual illustration; the chart reports the frozen results. No live system and no resident was involved.",
+  "x_post": "when does a shared stage help a mind?\n\nin a frozen simulation, copying content into every part of a mind never paid (0/27). one shared store every part could read did, when big and well chosen (5/36). code + negatives public.",
+  "linkedin_post": "When does a shared stage help a mind?\n\nIn a frozen simulation with twelve specialist faculties, copying selected content into every faculty's memory never beat an ordinary rival that learns whom to ask (0 of 27 conditions). Holding the same content in one shared, readable store did, in 5 of 36 conditions, when the store was large and the judgement of what entered it was good. A version that alternated two contents never helped. Code, frozen rules and every negative are public."
+}
