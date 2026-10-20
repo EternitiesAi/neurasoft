@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">The room and the floor plan</title>
+<desc id="desc">An architectural plan on the left and an imagined interior on the right. The same window and chair become afternoon light and a place to sit. An original conceptual illustration about description and experience.</desc>
+<defs>
+ <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#bdc9b7" stroke-width=".6"/></pattern>
+ <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e6dfca"/><stop offset="1" stop-color="#cecdb6"/></linearGradient>
+ <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#abbdb2"/><stop offset="1" stop-color="#f2d9a7"/></linearGradient>
+ <linearGradient id="light" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffedc4" stop-opacity=".9"/><stop offset="1" stop-color="#f6dfa7" stop-opacity=".2"/></linearGradient>
+</defs>
+<rect width="1200" height="630" fill="#f3f1e7"/>
+<text x="50" y="48" fill="#4d6553" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">NEURASOFT / SOMETHING IT IS LIKE TO BE</text>
+<path d="M50 69H1150" stroke="#bdc8b6"/>
+<rect x="50" y="102" width="518" height="394" fill="#e8ede2"/>
+<rect x="50" y="102" width="518" height="394" fill="url(#grid)" opacity=".65"/>
+<g fill="none" stroke="#526d59" stroke-width="2">
+ <path d="M138 184H239M355 184H469V420H335M272 420H138Z" stroke-width="7"/>
+ <path d="M239 180H355M239 188H355"/>
+ <path d="M272 420V357A63 63 0 0 1 335 420" stroke-width="1.4"/>
+ <rect x="362" y="295" width="55" height="61" rx="3"/>
+ <path d="M367 290H412M358 301V350M421 301V350M366 359V370M413 359V370"/>
+ <path d="M138 147H469M138 138V156M469 138V156M102 184V420M93 184H111M93 420H111" stroke-width="1"/>
+ <path d="M285 250H309M297 238V262" stroke-width="1"/>
+</g>
+<text x="280" y="137" font-family="Arial,sans-serif" font-size="11" fill="#526d59" letter-spacing="2">WINDOW</text>
+<text x="349" y="395" font-family="Arial,sans-serif" font-size="11" fill="#526d59" letter-spacing="2">CHAIR</text>
+<text x="296" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#526d59" letter-spacing="2">A VIEW FROM ABOVE</text>
+<rect x="632" y="102" width="518" height="394" fill="url(#wall)"/>
+<path d="M632 375H1150V496H632Z" fill="#b5bba0"/>
+<path d="M1012 102V375L1150 496V102Z" fill="#a7af98" opacity=".45"/>
+<path d="M632 375H1012L1150 496M1012 102V375" fill="none" stroke="#7f9079" stroke-opacity=".35"/>
+<path d="M716 170H877V363H716Z" fill="#6e806b"/>
+<path d="M724 178H869V355H724Z" fill="url(#sky)"/>
+<path d="M724 310Q766 279 808 303T869 290V355H724Z" fill="#91a88d"/>
+<path d="M724 329Q784 303 869 327V355H724Z" fill="#6c8e74"/>
+<path d="M796 178V355M724 265H869" stroke="#e8e4d0" stroke-width="6"/>
+<path d="M716 170L692 184V379L716 363M877 170L901 184V379L877 363" fill="#eee7d0" stroke="#acb199" stroke-width="2"/>
+<path d="M724 355H869L1081 496H768Z" fill="url(#light)"/>
+<path d="M795 355L936 496M724 403H940" stroke="#8c957e" stroke-opacity=".28" stroke-width="5"/>
+<path d="M938 438L1066 481L1030 492L917 447Z" fill="#64735e" opacity=".28"/>
+<g stroke="#475c49" stroke-width="6" stroke-linejoin="round" fill="#75856a">
+ <path d="M912 360L961 349L968 393L919 407Z"/>
+ <path d="M919 407L968 393L994 408L943 424Z" fill="#8e9b7a"/>
+ <path d="M919 407L918 455M943 424L945 467M994 408L994 453M968 393L973 439" fill="none"/>
+</g>
+<path d="M50 525H1150" stroke="#bdc8b6"/>
+<text x="50" y="569" font-family="Georgia,serif" font-size="31" fill="#2d4535">The room described.</text>
+<text x="632" y="569" font-family="Georgia,serif" font-size="31" fill="#2d4535">The room encountered.</text>
+<text x="50" y="603" font-family="Arial,sans-serif" font-size="12" fill="#5b6c58">AN ILLUSTRATION ABOUT PERSPECTIVE</text>
+<text x="1150" y="603" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#5b6c58">NOT A MODEL OF CONSCIOUSNESS</text>
+</svg>
