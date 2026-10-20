@@ -39,4 +39,13 @@ The cover PNG is already included. Optional regeneration uses `node tools/render
 
 Publish only `artifacts/cloudflare/` to the existing Cloudflare Pages project `neurasoft-research`. Cloudflare's deployment branch `main` is distinct from the historical Git source branch of the same name. Recheck current production before publishing to preserve concurrent releases.
 
-Hosted verification and final deployment receipts are appended after publication. Private editorial research notes and browser receipts are excluded from this public repository.
+## Publication receipt
+
+- Deployed source: `c361c94ff873144645bbb8e39b791e2f3ade06e1`.
+- Preview: `5a7921d2-a5cd-4770-b25f-a845dfe18fd9`, https://5a7921d2.neurasoft-research.pages.dev.
+- Production: `10b6da02-4a29-48dc-b21f-ba18beeb2496`, https://10b6da02.neurasoft-research.pages.dev.
+- https://neurasoft.us was verified after publication. All 181 served files match the build on preview, production and the custom domain, with required security headers and the real custom 404. The staged directory also contains the Cloudflare headers configuration, which is applied rather than served as a page.
+- Connected-browser checks: desktop presentation, phone layout at 390 × 844 with no horizontal overflow, all three history choices, Enter-key activation, reset, search discovery, and the live custom-domain interaction. With script execution disabled, the native disclosure for “A door reopening” opens and displays its complete text. Normal script execution and the default viewport were restored afterward.
+- No browser warnings or errors were observed in the local or hosted preview checks. Production byte verification permits the release verifier's existing, narrowly recognised Cloudflare HTML transformation; it does not relax content or security-header checks.
+
+Private editorial research notes, raw verification receipts and browser screenshots remain outside the public Git content. This documentation-only receipt does not change the deployed build.
