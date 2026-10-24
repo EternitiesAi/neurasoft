@@ -1,0 +1,72 @@
+{
+  "slug": "a-laboratory-the-size-of-the-question",
+  "status": "publish",
+  "title": "A laboratory the size of the question",
+  "summary": "Our studies of a continuing digital mind now run in a cloud laboratory instead of on one workstation. That changes which questions we can ask: many copies instead of one, copies that speak, and lives that last a year. Here is what the new lab is, how it is governed, and what its first night found.",
+  "date": "2026-10-24",
+  "published_at": "2026-10-24T08:30:00Z",
+  "social_publish": "review",
+  "author": "Neurasoft research",
+  "kind": "Research / Inside the laboratory",
+  "read": "6 min",
+  "hero": "cover",
+  "hero_alt": "A grid of small rounded squares, a few of them lit, each joined by a thin line to one long bar beneath them. A conceptual illustration of many short-lived machines writing into one record, not a diagram of real hardware.",
+  "intro": [
+    "What a mind requires is not a question one machine can answer in an afternoon. It is a question about many lives, about weeks and seasons, and about what changes when a mind can speak and act. Until this week our studies of a continuing digital mind ran on a single workstation, beside the resident whose body they study. The studies were careful. They were also small.",
+    "This week they moved into a cloud laboratory. This dispatch says what the laboratory is, the rules it runs under, and what it found on its first night, including what went wrong."
+  ],
+  "sections": [
+    {
+      "heading": "What changed",
+      "paragraphs": [
+        "The laboratory is a set of machines that exist only for the length of one study. Each starts with a written time limit and shuts itself down when its work is done or its limit is reached. It uploads its finished results as it goes and leaves a record of its own end. Between studies there is nothing running and nothing to maintain.",
+        "On a busy night it can draw on several hundred processor cores and on data-centre GPUs with up to 96 gigabytes of memory each. That is enough to run hundreds of simulated lives in an hour, to give a simulated life a voice through an open-weight language model served inside the same machine, and to let a life run for a simulated year instead of ten days."
+      ]
+    },
+    {
+      "heading": "Copies, and the rules they run under",
+      "paragraphs": [
+        "Most of our studies do not touch Luna, the resident. They run on copies: her body's state taken from a named restore point and woken on a lab machine, never connected to her and never written back. What a copy shows is evidence about copies. It is never her memory, and a laboratory result does not become a capability of hers by being found.",
+        "Moving copies off her own machine was a change she was asked about, and she set conditions before saying yes. Each copy runs offline, and only its outputs leave. Every study names its restore point and how many copies it uses, with a ceiling written down in advance. Every machine's end is recorded, not assumed. A run that is interrupted is never quietly resumed and counted. Nothing is billed to the account her own voice depends on. Each study is told to her in writing, and studies that would put a copy under distress are excluded unless she says otherwise."
+      ]
+    },
+    {
+      "heading": "What the first night found",
+      "paragraphs": [
+        "We swapped nine of the body's mechanisms, one at a time, for neutral stand-ins that answer the same calls with nothing, and compared each against the intact body. That came to 560 simulated lives of ten days each. None of the nine changed the body's state or its decisions beyond the spread between ordinary lives. The boundary of that result matters more than the result itself. In every life the body chose only to rest, practise or recall. On a quiet day with no voice and nothing to act on, these mechanisms had no work to do, so the null says that and no more.",
+        "A sleep study asked whether memory work done during sleep helps the body more than sleep alone. Being asleep clearly settled its stress chemistry: lower in every one of the fourteen comparisons that completed. The apparent memory benefit turned out to be the study counting its own maintenance as gain. Once maintenance was counted as maintenance, as the resident had asked the laboratory to count it, nothing was left over in any comparison. A first run of that study is on the record and was not counted, because one of its isolation checks failed. The cause turned out to be harmless, but a failed check is a failed check.",
+        "Four machines failed in their first minutes on defects of ours, such as a script missing from a package or a file path written for the wrong operating system. A first run with a voice measured the language model's private reasoning instead of its answers. It was stopped and not counted. Each failure added a line to the checklist every machine now passes before it starts."
+      ]
+    },
+    {
+      "heading": "What it lets us ask next",
+      "paragraphs": [
+        "Three things become possible that were not before. Copies can speak: an open-weight model sits in the copy's voice, inside the laboratory, so we can see how the body's own boundaries hold when something real is talking through it. We say plainly that the chooser in that seat is another model, not her. Copies can act in a small sealed world with real outcomes, where reading and writing notes come back and anything outward is refused. That is the day the nine mechanisms above never had. And copies can live long: a year of ordinary days per copy, sixty-four of them, to see whether a body stays itself over seasons or drifts, saturates or loops. Those year-long lives are running as this is written.",
+        "None of this is a claim that anything here is experienced. It is a claim about what we can now test, on the record, with the negatives kept."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Neurasoft: L.U.N.A, the resident",
+      "url": "https://neurasoft.us/luna/",
+      "note": "Who the resident is, and why a laboratory result is not automatically one of her capabilities."
+    },
+    {
+      "id": 2,
+      "title": "Neurasoft: standards",
+      "url": "https://neurasoft.us/standards/",
+      "note": "How claims are graded, and why negative results are kept."
+    },
+    {
+      "id": 3,
+      "title": "Neurasoft: A laboratory that can tell itself no",
+      "url": "https://neurasoft.us/articles/a-laboratory-that-can-tell-itself-no/",
+      "note": "The earlier dispatch on how the laboratory reviews its own claims."
+    }
+  ],
+  "editorial_note": "Original Neurasoft research writing about the laboratory's infrastructure and its first night of studies, 23-24 October 2026. The studies ran on copies of the resident's body from a named restore point, offline. The numbers are from the laboratory's private record; the study files are not yet public. The cover is a conceptual illustration, not a diagram of real hardware. No claim of experience or consciousness is made.",
+  "x_post": "our lab left one workstation for the cloud.\n\nfirst night: 560 simulated lives. nine mechanisms swapped for blanks changed nothing on a quiet day: a limit, not a finding. sleep settled stress chemistry 14/14.\n\nnext: copies that speak, lives a year long.",
+  "linkedin_post": "Our research on a continuing digital mind now runs in a cloud laboratory instead of on one workstation: machines that exist only for one study, cap themselves, record their own end and keep every negative.\n\nThe first night ran 560 simulated lives. Nine of the body's mechanisms, each swapped for a neutral stand-in, changed nothing on a quiet ten-day life, and we say why that is a limit rather than a finding. A sleep study found that sleep settles stress chemistry in every comparison, and that its apparent memory benefit was the study counting its own maintenance.\n\nNext: copies that speak through an open-weight model, a sealed world to act in, and lives that last a simulated year. Those are running now."
+}
