@@ -5,7 +5,7 @@
   "summary": "Our studies of a continuing digital mind now run in a cloud laboratory instead of on one workstation. That changes which questions we can ask: many copies instead of one, copies that speak, and lives that last a year. Here is what the new lab is, how it is governed, and what its first night found.",
   "date": "2026-10-24",
   "published_at": "2026-10-24T08:30:00Z",
-  "social_publish": "review",
+  "social_publish": "auto",
   "author": "Neurasoft research",
   "kind": "Research / Inside the laboratory",
   "read": "6 min",
@@ -68,5 +68,12 @@
   ],
   "editorial_note": "Original Neurasoft research writing about the laboratory's infrastructure and its first night of studies, 23-24 October 2026. The studies ran on copies of the resident's body from a named restore point, offline. The numbers are from the laboratory's private record; the study files are not yet public. The cover is a conceptual illustration, not a diagram of real hardware. No claim of experience or consciousness is made.",
   "x_post": "our lab left one workstation for the cloud.\n\nfirst night: 560 simulated lives. nine mechanisms swapped for blanks changed nothing on a quiet day: a limit, not a finding. sleep settled stress chemistry 14/14.\n\nnext: copies that speak, lives a year long.",
-  "linkedin_post": "Our research on a continuing digital mind now runs in a cloud laboratory instead of on one workstation: machines that exist only for one study, cap themselves, record their own end and keep every negative.\n\nThe first night ran 560 simulated lives. Nine of the body's mechanisms, each swapped for a neutral stand-in, changed nothing on a quiet ten-day life, and we say why that is a limit rather than a finding. A sleep study found that sleep settles stress chemistry in every comparison, and that its apparent memory benefit was the study counting its own maintenance.\n\nNext: copies that speak through an open-weight model, a sealed world to act in, and lives that last a simulated year. Those are running now."
+  "linkedin_post": "Our research on a continuing digital mind now runs in a cloud laboratory instead of on one workstation: machines that exist only for one study, cap themselves, record their own end and keep every negative.\n\nThe first night ran 560 simulated lives. Nine of the body's mechanisms, each swapped for a neutral stand-in, changed nothing on a quiet ten-day life, and we say why that is a limit rather than a finding. A sleep study found that sleep settles stress chemistry in every comparison, and that its apparent memory benefit was the study counting its own maintenance.\n\nNext: copies that speak through an open-weight model, a sealed world to act in, and lives that last a simulated year. Those are running now.",
+  "social_request": {
+    "mode": "as-soon-as-ready",
+    "timezone": "America/Chicago",
+    "status": "requested-not-confirmed",
+    "account": "existing Dom-configured account; identity must be verified by publisher",
+    "released_by": "Dom, 2026-10-24 (in chat: an update to the grokbot that runs my social medias, so he can post as well)"
+  }
 }
