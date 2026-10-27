@@ -53,5 +53,5 @@ recorded_history=['missed deadline']
 choose=lambda observation,history: 'accept'
 check('archive may change while action remains independent of history', recorded_history != [] and choose('new task',recorded_history)==choose('new task',[]))
 result={'kind':'analytical-example-checks','version':'1.0','passed':True,'checks':checks,'check_count':len(checks),'brier_max_absolute_error':largest_error,'observational_distribution':[{'A':k[0],'R':k[1],'Y':k[2],'probability':v} for k,v in sorted(joint_i.items())],'intervention_effects':{'model_i':effects[0],'model_ii':effects[1]},'scope':'Finite mechanical checks of illustrative mathematics; no empirical agent experiment or consciousness result.'}
-Path(__file__).with_name('analytic-checks.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+Path(__file__).with_name('analytic-checks.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({'passed':True,'check_count':len(checks),'brier_max_absolute_error':largest_error}))

@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape
 import re
 from reportlab.lib import colors
+from reportlab import rl_config
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Preformatted
@@ -10,6 +11,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 ROOT=Path(__file__).resolve().parents[1]
+rl_config.invariant=1
 OUT=ROOT/'assets/papers/when-history-changes-the-agent'
 source=(OUT/'when-history-changes-the-agent.md').read_text(encoding='utf-8')
 fonts=Path('C:/Windows/Fonts')
@@ -62,5 +64,5 @@ pdf=OUT/'when-history-changes-the-agent.pdf'
 SimpleDocTemplate(str(pdf),pagesize=A4,leftMargin=52,rightMargin=52,topMargin=48,bottomMargin=60,title='When History Changes the Agent',author='Neurasoft research / Eternities Inc.',subject='A causal protocol for developmental continuity, appraisal, and prospective self-knowledge').build(story,onFirstPage=footer,onLaterPages=footer)
 head='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>When History Changes the Agent | Neurasoft</title><meta name="description" content="A prospective methods preprint on developmental continuity, appraisal and useful self-knowledge in persistent artificial agents."><link rel="canonical" href="https://neurasoft.us/assets/papers/when-history-changes-the-agent/"><link rel="stylesheet" href="paper.css"></head><body><main><nav><a href="/">Neurasoft</a> / <a href="/articles/the-shape-of-someone/">Read the essay</a></nav>'''
 links='''<p class="downloads"><a href="when-history-changes-the-agent.pdf">Download PDF</a> <a href="when-history-changes-the-agent.md">Manuscript</a> <a href="research-bundle.zip">Research bundle</a> <a href="analytic-checks.json">Analytical checks</a></p>'''
-(OUT/'index.html').write_text(head+links+''.join(html)+'<footer>Prospective protocol; no new subject results. <a href="DEPOSIT.md">Zenodo preparation notes</a>.</footer></main></body></html>',encoding='utf-8')
+(OUT/'index.html').write_text(head+links+''.join(html)+'<footer>Prospective protocol; no new subject results. <a href="DEPOSIT.md">Zenodo preparation notes</a>.</footer></main></body></html>',encoding='utf-8',newline='\n')
 print('Rendered manuscript to PDF and HTML: '+str(len(source.split()))+' words.')
