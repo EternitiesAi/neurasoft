@@ -4,7 +4,7 @@
 
 Neurasoft research / Eternities Inc.
 
-Methods preprint, version 1.0. 27 October 2026. Not peer reviewed.
+Methods preprint, version 1.0. 27 October 2026. Not peer reviewed. CC BY 4.0.
 
 Commissioned by David Dominik Wilson. Developed with OpenAI Codex assistance in conceptual synthesis, formal exposition, implementation and editorial preparation. Organizational byline; no claim of independent human replication. This manuscript proposes a protocol and supplies analytical counterexamples. It reports no new resident, human or animal experiment.
 
@@ -149,6 +149,8 @@ Laboratory histories and interventions require explicit authority, scope and exp
 ### 12. Availability, authorship and status
 
 Manuscript, PDF, analytical check script, check output and deposition metadata are distributed together on the Neurasoft website. The accompanying essay is The Shape of Someone. Version 1.0 is a prospective methods preprint and has not undergone peer review or independent replication. AI assistance is disclosed on the title page. The organizational author is responsible for any subsequent release and corrections. A Zenodo DOI has not been assigned to this version at preparation time.
+
+Copyright 2026 Neurasoft research. The paper and its original accompanying research materials are distributed under Creative Commons Attribution 4.0 International (CC BY 4.0). Cited works retain their own terms. License text: https://creativecommons.org/licenses/by/4.0/
 
 ### References
 
