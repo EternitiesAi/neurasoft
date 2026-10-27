@@ -12,6 +12,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 from public_search import extract_main_text
 import article_reflections
+import article_continuity
 
 CSS = '<link rel="stylesheet" href="/assets/articles.css">'
 FEED = '<link rel="alternate" type="application/rss+xml" title="Neurasoft articles" href="/articles/feed.xml">'
@@ -41,6 +42,11 @@ def load_articles(root, today=None):
             raise ValueError('Only one reflection per article is supported')
         for reflection in reflections:
             article_reflections.validate(reflection)
+        desks = [s['thought_experiment'] for s in a['sections'] if 'thought_experiment' in s]
+        if len(desks) > 1:
+            raise ValueError('Only one continuity desk per article is supported')
+        for desk in desks:
+            article_continuity.validate(desk)
         for name in [a['hero']] + [s['figure'] for s in a['sections'] if 'figure' in s]:
             if not re.fullmatch(r'[a-z0-9-]+', name):
                 raise ValueError('Invalid image name')
@@ -76,6 +82,8 @@ def markdown(a, base):
         lines += ['## ' + s['heading'], ''] + [p + '\n' for p in s['paragraphs']]
         if 'reflection' in s:
             lines += article_reflections.markdown(s['reflection'])
+        if 'thought_experiment' in s:
+            lines += article_continuity.markdown(s['thought_experiment'])
         if 'figure' in s:
             lines += [f"![{s['figure_alt']}]({base}/assets/articles/{a['slug']}/{s['figure']}.png)", '', s['caption'], '']
     lines += ['## Sources', ''] + [f"[{s['id']}] [{s['title']}]({s['url']}) — {s['note']}" for s in a['sources']]
@@ -101,12 +109,16 @@ def finish(b):
             body += '<h2>' + E(s['heading']) + '</h2>' + ''.join(paragraph(p) for p in s['paragraphs'])
             if 'reflection' in s:
                 body += article_reflections.render(s['reflection'])
+            if 'thought_experiment' in s:
+                body += article_continuity.render(s['thought_experiment'])
             if 'figure' in s:
                 body += '<figure><a href="/assets/articles/' + a['slug'] + '/' + s['figure'] + '.svg">' + picture(a,s['figure'],s['figure_alt']) + '</a><figcaption>' + E(s['caption']) + ' Tap the diagram to view it full size.</figcaption></figure>'
         body += '<section class="dispatch-sources"><h2>Sources & further reading</h2><ol>'
         body += ''.join(f'<li id="source-{s["id"]}"><a href="{E(s["url"],quote=True)}">{E(s["title"])}</a><br>{E(s["note"])}</li>' for s in a['sources'])
         body += f'</ol><p class="dispatch-editorial">{E(a["editorial_note"])}</p><p><a href="{route(a)}article.md">Read as Markdown</a> · <a href="/articles/">All dispatches</a> · <a href="/articles/feed.xml">RSS feed</a></p></section></article>'
         extras = article_reflections.ASSETS if any('reflection' in s for s in a['sections']) else ''
+        if any('thought_experiment' in s for s in a['sections']):
+            extras += article_continuity.ASSETS
         b.shell(route(a), a['title'], a['summary'], body, 'journal', extra=CSS+FEED+extras, article=True)
         dest = b.OUT / route(a).strip('/')
         text = (dest/'index.html').read_text(encoding='utf-8')

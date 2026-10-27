@@ -56,7 +56,22 @@ class SiteTests(unittest.TestCase):
   self.assertNotRegex(text,r'(?i)(D:/01-ETERNITIES|[A-Z]:\\|/mnt/data|xnuonux/|github\.com/xnuonux|PID\d|operationRevision|@@reload)')
  def test_no_credentials(self):self.assertNotRegex(self.joined,r'(sk-[A-Za-z0-9]{16}|ghp_[A-Za-z0-9]+|netlify-mcp\.netlify\.app/proxy/)')
  def test_private_directory_not_deployed(self):self.assertFalse((DIST/'private').exists())
- def test_no_source_bundle_in_public_tree(self):self.assertFalse(any(DIST.rglob('*.zip')))
+ def test_no_source_bundle_in_public_tree(self):
+  # This deliberately public methods supplement contains only reviewed paper assets.
+  # Repository/source backups and every other ZIP remain forbidden.
+  from zipfile import ZipFile
+  from hashlib import sha256
+  allowed=DIST/'assets/papers/when-history-changes-the-agent/research-bundle.zip'
+  self.assertEqual(set(DIST.rglob('*.zip')),{allowed})
+  expected={'when-history-changes-the-agent.pdf','when-history-changes-the-agent.md','verify_analytic_examples.py','analytic-checks.json','zenodo-metadata.json','DEPOSIT.md','index.html','paper.css','manifest.sha256'}
+  with ZipFile(allowed) as bundle:
+   self.assertEqual(set(bundle.namelist()),expected)
+   self.assertEqual(len(bundle.namelist()),len(expected))
+   for name in expected:
+    self.assertEqual(bundle.read(name),(allowed.parent/name).read_bytes())
+   manifest=dict((line.split('  ',1)[1],line.split('  ',1)[0]) for line in bundle.read('manifest.sha256').decode().splitlines())
+   self.assertEqual(set(manifest),expected-{'manifest.sha256'})
+   for name,digest in manifest.items():self.assertEqual(sha256(bundle.read(name)).hexdigest(),digest)
  def test_article_source_dates(self):
   for p in (DIST/'journal').glob('*/index.html'):self.assertIn('Underlying record:',p.read_text(encoding='utf-8'))
  def test_articles_not_peer_reviewed(self):

@@ -1,0 +1,16 @@
+{
+  "deposit_status": "prepared-not-submitted",
+  "resource_type": "publication-preprint",
+  "title": "When History Changes the Agent: A causal protocol for developmental continuity, appraisal, and prospective self-knowledge",
+  "creators": [{"name": "Neurasoft research", "type": "organizational", "affiliation": "Eternities Inc."}],
+  "publication_date": "2026-10-27",
+  "version": "1.0",
+  "language": "eng",
+  "description": "A prospective methods preprint proposing an integrated causal protocol for record retention, developmental history dependence, revisable appraisal, useful prospective self-knowledge and recurrent integration in persistent artificial agents. Includes elementary analytical counterexamples and reproducible standard-library checks. Reports no new subject experiments. Not peer reviewed. Commissioned by David Dominik Wilson; developed with disclosed OpenAI Codex assistance.",
+  "keywords": ["artificial consciousness", "persistent agents", "developmental continuity", "causal inference", "metacognition", "appraisal", "self-knowledge"],
+  "related_url": "https://neurasoft.us/articles/the-shape-of-someone/",
+  "license_proposal": "CC-BY-4.0",
+  "license_status": "owner confirmation required before deposit; not granted by preparation",
+  "doi": null,
+  "metadata_status": "human-readable preparation metadata; not an API submission payload"
+}

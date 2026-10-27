@@ -1,5 +1,9 @@
 # Neurasoft — Research Publication / Edition 3
 
+**New essay and methods preprint, 27 October 2026:** [The Shape of Someone](https://neurasoft.us/articles/the-shape-of-someone/) and [When History Changes the Agent](https://neurasoft.us/assets/papers/when-history-changes-the-agent/).
+Current publication source: editorial/the-shape-of-someone-20261027, based on the complete October24 publication and released social packet. See [the release record](docs/editorial-releases/2026-10-27-shape.md).
+The newer publication source above supersedes the dated branch pointers below; the historical Git main branch remains unsuitable for deployment.
+
 **New interactive essay, 20 October 2026:** [Something it is Like to Be](https://neurasoft.us/articles/something-it-is-like-to-be/).
 Current publication source: `editorial/something-it-is-like-to-be-20261020`, based on the October17 NVIDIA Inception release and preserving all prior editorial work.
 See [the release record](docs/editorial-releases/2026-10-20-something.md) for the article, local interaction and reproduction steps.

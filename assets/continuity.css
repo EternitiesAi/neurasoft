@@ -1,0 +1,10 @@
+.continuity-desk{margin:44px -44px;padding:32px 36px;background:#e5eced;border:1px solid #adbdbe;border-radius:4px;color:#243b40}
+.continuity-desk [hidden]{display:none!important}.continuity-desk h3{font:400 32px/1.2 Georgia,serif;margin:0 0 22px;letter-spacing:-.025em}
+.continuity-desk p{font-size:17px;line-height:1.7}.continuity-desk .continuity-scene{font:23px/1.55 Georgia,serif}
+.continuity-modes{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.continuity-modes button{flex:1 1 130px;padding:12px 14px;min-height:48px;border:1px solid #6a8388;background:#f5f7f3;color:#243b40;font:15px/1.4 Arial,sans-serif;border-radius:3px;cursor:pointer}
+.continuity-modes button[aria-pressed=true]{background:#31575f;color:white;border-color:#31575f}.continuity-controls label{display:flex;align-items:center;gap:10px;min-height:44px;font:15px/1.4 Arial,sans-serif;cursor:pointer}.continuity-controls input{width:19px;height:19px;accent-color:#31575f}
+.continuity-desk .continuity-output{margin-top:22px;padding:22px 0 0;border-top:1px solid #adbdbe;min-height:215px}.continuity-desk .continuity-state{font:600 14px/1.4 Arial,sans-serif;color:#46676e;margin-bottom:12px}.continuity-desk .continuity-choice{font:23px/1.55 Georgia,serif}.continuity-desk .continuity-note{font:13px/1.6 Arial,sans-serif;margin:20px 0 0;padding-top:16px;border-top:1px solid #adbdbe;color:#496369}
+.continuity-desk details{padding:14px 0;border-top:1px solid #adbdbe}.continuity-desk summary{cursor:pointer;min-height:44px;font-weight:600}.continuity-desk h4{font:600 16px/1.4 Arial,sans-serif;margin:24px 0 8px}
+.continuity-desk :is(button,input,summary):focus-visible{outline:3px solid #8a6049;outline-offset:4px}
+@media(max-width:800px){.continuity-desk{margin:32px -4px;padding:24px 20px}.continuity-modes{display:grid;grid-template-columns:1fr}.continuity-desk .continuity-output{min-height:0}}
+@media print{.continuity-controls,.continuity-output{display:none!important}.continuity-desk [data-continuity-stories][hidden]{display:block!important}.continuity-desk details::details-content{content-visibility:visible}}

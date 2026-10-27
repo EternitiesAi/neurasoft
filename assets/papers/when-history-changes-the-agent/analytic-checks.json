@@ -1,0 +1,59 @@
+{
+  "kind": "analytical-example-checks",
+  "version": "1.0",
+  "passed": true,
+  "checks": [
+    "identical observed action-receipt-outcome distributions",
+    "Model I intervention effect equals one",
+    "Model II intervention effect equals zero",
+    "Brier grid minimum at truth q=0.0",
+    "Brier grid minimum at truth q=0.05",
+    "Brier grid minimum at truth q=0.1",
+    "Brier grid minimum at truth q=0.15",
+    "Brier grid minimum at truth q=0.2",
+    "Brier grid minimum at truth q=0.25",
+    "Brier grid minimum at truth q=0.3",
+    "Brier grid minimum at truth q=0.35",
+    "Brier grid minimum at truth q=0.4",
+    "Brier grid minimum at truth q=0.45",
+    "Brier grid minimum at truth q=0.5",
+    "Brier grid minimum at truth q=0.55",
+    "Brier grid minimum at truth q=0.6",
+    "Brier grid minimum at truth q=0.65",
+    "Brier grid minimum at truth q=0.7",
+    "Brier grid minimum at truth q=0.75",
+    "Brier grid minimum at truth q=0.8",
+    "Brier grid minimum at truth q=0.85",
+    "Brier grid minimum at truth q=0.9",
+    "Brier grid minimum at truth q=0.95",
+    "Brier grid minimum at truth q=1.0",
+    "Brier identity floating-point error below 1e-14",
+    "shared clock offset changes illustrative treatment contrast",
+    "repair inequality agrees with direct expected-loss comparison",
+    "repair inequality agrees with direct expected-loss comparison",
+    "equal losses allow indifferent policies",
+    "repair inequality agrees with direct expected-loss comparison",
+    "archive may change while action remains independent of history"
+  ],
+  "check_count": 31,
+  "brier_max_absolute_error": 2.220446049250313e-16,
+  "observational_distribution": [
+    {
+      "A": 0,
+      "R": 1,
+      "Y": 0,
+      "probability": 0.5
+    },
+    {
+      "A": 1,
+      "R": 1,
+      "Y": 1,
+      "probability": 0.5
+    }
+  ],
+  "intervention_effects": {
+    "model_i": 1.0,
+    "model_ii": 0.0
+  },
+  "scope": "Finite mechanical checks of illustrative mathematics; no empirical agent experiment or consciousness result."
+}
