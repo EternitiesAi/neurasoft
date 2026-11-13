@@ -13,6 +13,7 @@ import xml.etree.ElementTree as ET
 from public_search import extract_main_text
 import article_reflections
 import article_continuity
+import article_voyager
 
 CSS = '<link rel="stylesheet" href="/assets/articles.css">'
 FEED = '<link rel="alternate" type="application/rss+xml" title="Neurasoft articles" href="/articles/feed.xml">'
@@ -47,6 +48,11 @@ def load_articles(root, today=None):
             raise ValueError('Only one continuity desk per article is supported')
         for desk in desks:
             article_continuity.validate(desk)
+        labs = [s['voyager_lab'] for s in a['sections'] if 'voyager_lab' in s]
+        if len(labs) > 1:
+            raise ValueError('Only one Voyager lab per article is supported')
+        for lab in labs:
+            article_voyager.validate(lab)
         for name in [a['hero']] + [s['figure'] for s in a['sections'] if 'figure' in s]:
             if not re.fullmatch(r'[a-z0-9-]+', name):
                 raise ValueError('Invalid image name')
@@ -84,6 +90,8 @@ def markdown(a, base):
             lines += article_reflections.markdown(s['reflection'])
         if 'thought_experiment' in s:
             lines += article_continuity.markdown(s['thought_experiment'])
+        if 'voyager_lab' in s:
+            lines += article_voyager.markdown(s['voyager_lab'])
         if 'figure' in s:
             lines += [f"![{s['figure_alt']}]({base}/assets/articles/{a['slug']}/{s['figure']}.png)", '', s['caption'], '']
     lines += ['## Sources', ''] + [f"[{s['id']}] [{s['title']}]({s['url']}) — {s['note']}" for s in a['sources']]
@@ -111,6 +119,8 @@ def finish(b):
                 body += article_reflections.render(s['reflection'])
             if 'thought_experiment' in s:
                 body += article_continuity.render(s['thought_experiment'])
+            if 'voyager_lab' in s:
+                body += article_voyager.render(s['voyager_lab'])
             if 'figure' in s:
                 body += '<figure><a href="/assets/articles/' + a['slug'] + '/' + s['figure'] + '.svg">' + picture(a,s['figure'],s['figure_alt']) + '</a><figcaption>' + E(s['caption']) + ' Tap the diagram to view it full size.</figcaption></figure>'
         body += '<section class="dispatch-sources"><h2>Sources & further reading</h2><ol>'
@@ -119,9 +129,13 @@ def finish(b):
         extras = article_reflections.ASSETS if any('reflection' in s for s in a['sections']) else ''
         if any('thought_experiment' in s for s in a['sections']):
             extras += article_continuity.ASSETS
+        if any('voyager_lab' in s for s in a['sections']):
+            extras += article_voyager.ASSETS
         b.shell(route(a), a['title'], a['summary'], body, 'journal', extra=CSS+FEED+extras, article=True)
         dest = b.OUT / route(a).strip('/')
         text = (dest/'index.html').read_text(encoding='utf-8')
+        if any('voyager_lab' in s for s in a['sections']):
+            text = text.replace('<body data-article="true">', '<body data-article="true" class="voyager-page">')
         image = b.BASE + '/assets/articles/' + a['slug'] + '/' + a['hero'] + '.png'
         text = text.replace(b.BASE+'/assets/social.png',image)
         text = re.sub(r'(<meta property="og:image:alt" content=")[^"]*(")',lambda m:m[1]+E(a['hero_alt'],quote=True)+m[2],text)
