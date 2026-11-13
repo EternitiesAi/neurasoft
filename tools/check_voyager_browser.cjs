@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const origin = process.argv[2] || 'http://127.0.0.1:8749';
-const out = path.resolve(__dirname,'../artifacts/voyager-browser',new URL(origin).hostname);
+const out = path.resolve(__dirname,'../artifacts/voyager-browser/v1.1',new URL(origin).hostname);
 fs.mkdirSync(out,{recursive:true});
 (async()=>{
  const browser=await chromium.launch({headless:true});
@@ -61,7 +61,8 @@ fs.mkdirSync(out,{recursive:true});
   assert(await plain.locator('.v-method a').isVisible());await nojs.close();
   const packet=await(await page.request.get(origin+'/articles/project-voyager/grok-packet.json')).json();
   assert.equal(packet.publish,'auto');assert.equal(packet.social_publication_status,'prepared-not-confirmed');
-  assert.equal(packet.images.length,3);
+  assert.equal(packet.images.length,4);
+  assert.equal(packet.revision,'1.1');
   for(const url of [packet.markdown_url,...packet.images.map(i=>i.url),'https://neurasoft.us/assets/articles/project-voyager/research-snapshot.md']) {
    assert.equal((await page.request.get(url.replace('https://neurasoft.us',origin))).status(),200);
   }
