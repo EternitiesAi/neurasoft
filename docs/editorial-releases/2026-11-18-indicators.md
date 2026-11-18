@@ -117,3 +117,17 @@ Still open: source 5 (the living thread). Outreach read it through the founder's
 (una-shared/outreach/CHRIS-PERCY-THREAD-20261118.md): beyond Butlin et al. it covers the Digital Consciousness Model
 (Shiller et al., 2026) and draft indicators from CEMI (4), the Beautiful Loop Theory (6) and General Resonance Theory (4).
 The lists themselves were in images or cut, so no mapping is published until their wording is in hand.
+
+## Revision 1.3, the same evening
+
+The second team returned independent cases for the two small judgments in row 6, which the page had said were owed. They
+are worse than the author's own cases and the row now says so, from the second team's records: the judge that binds an
+apology matched the accepted answer on 34 of 60 exchanges with 12 unsupported mends; a rewritten question (25 of 30 on
+fresh cases, none unsupported) has replaced it; the second opinion caught 20 of 20 clear put-downs, opened none of 20
+clear negatives, and called 16 of 20 ambiguous messages definite put-downs, which is not fixed. The snapshot carries the
+same under item 6. The count of failures is unchanged (row 6 was already one).
+
+Source 5a9d86b. Preview https://82b98ebe.neurasoft-research.pages.dev passed tools/verify_release.py (225 files).
+Production deployment https://86951848.neurasoft-research.pages.dev. https://neurasoft.us passed
+tools/verify_proxied_release.py (225 byte-exact, no mismatch) and serves "Version 1.3". 60 Python tests passed before
+deployment. Social posting is still held.
