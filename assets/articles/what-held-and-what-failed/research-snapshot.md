@@ -61,6 +61,15 @@ the lab, reported from its own records. The remaining rows are the engineering t
    second limit. The run journals confirmed five replies in these two conversations composed with no state at all, on
    the insult and apology messages. The judgment now follows the step and is never awaited by it. Those five replies
    are not evidence of anything about the state.
+   Added in version 1.3: the second team's independent cases, from its own records. The judge that binds an apology
+   matched the accepted answer on 34 of 60 independent interpersonal exchanges, with 12 unsupported concrete mends. On
+   30 further exchanges by another author, a rewritten question scored 25 exact against 24 and made no unsupported
+   mend against three; accepting a single known id returned as a one-element array gave 29 of 30 in replay. That
+   question is now in use (on the author's sixteen development cases it scores 32 of 32, as the earlier one did, which
+   shows how little those cases could tell). The second opinion on whether a message is a put-down: 20 of 20 clear
+   put-downs detected, none of 20 clear negatives opened, and 16 of 20 messages labelled ambiguous returned as
+   definite put-downs. Not fixed. When the judge could not be asked, plain apology words about something else were
+   taken as a mend; that fallback is removed.
 7. **A confound we introduced.** The state shown to the system described a recorded message as having "landed hard" and
    said how much it "still weighs". Both live systems later said the message "stung". The wording was removed after a
    review of the design; the record now carries the words said and nothing about their effect.
