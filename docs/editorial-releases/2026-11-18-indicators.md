@@ -99,3 +99,21 @@ Production deployment https://682b2654.neurasoft-research.pages.dev. https://neu
 tools/verify_proxied_release.py (225 byte-exact, no mismatch) and serves "Version 1.1". Receipts:
 artifacts/indicators-v1.1-preview.json, artifacts/indicators-v1.1-domain.json. 60 Python tests passed before deployment.
 Social posting is still held.
+
+## Revision 1.2, the same evening
+
+A reader working for outreach could not reconcile "eight" in the closing paragraph with the indicator table, where six rows
+read "Nothing" in the tested column. The count was right and could not be checked from the page: the eight are RPT-2,
+GWT-1, GWT-2, GWT-4, HOT-1, HOT-4, AST-1 and PP-1 (PP-1 because the one measurement under it is a rule we wrote, which is
+not evidence for the indicator). The paragraph now names the indicators behind each number: eight with nothing bearing on
+them, two failures (RPT-1, HOT-2), one weak evidence against (GWT-3), three mixed (HOT-3, AE-1, AE-2). No row changed.
+
+Source c6841fc. Preview https://70a68a1e.neurasoft-research.pages.dev passed tools/verify_release.py (225 files).
+Production deployment https://d68a3ba7.neurasoft-research.pages.dev. https://neurasoft.us passed
+tools/verify_proxied_release.py (225 byte-exact, no mismatch) and serves "Version 1.2". 60 Python tests passed before
+deployment. Social posting is still held.
+
+Still open: source 5 (the living thread). Outreach read it through the founder's signed-in account and saved an outline
+(una-shared/outreach/CHRIS-PERCY-THREAD-20261118.md): beyond Butlin et al. it covers the Digital Consciousness Model
+(Shiller et al., 2026) and draft indicators from CEMI (4), the Beautiful Loop Theory (6) and General Resonance Theory (4).
+The lists themselves were in images or cut, so no mapping is published until their wording is in hand.
