@@ -67,4 +67,19 @@ console errors. tools/check_editorial_browser.cjs was not run.
 
 ## Publication
 
-(filled in after each deployment is verified)
+Source 7dbfb28, pushed to origin/editorial/failures-and-wins-20261118.
+
+Preview https://c7a2e770.neurasoft-research.pages.dev (branch preview-failures-and-wins-20261118): tools/verify_release.py
+passed, 225 files, custom 404. Receipt: artifacts/indicators-preview.json.
+
+Production deployment https://69b64d6c.neurasoft-research.pages.dev (branch main), 19:41 UTC. The custom domain
+https://neurasoft.us passed tools/verify_proxied_release.py: 225 files byte-exact, no real mismatch, no bad status.
+Receipt: artifacts/indicators-domain.json. Checked by hand on the domain: the article returns 200, the homepage features
+it, the research snapshot returns 200, and the Grok packet reads `publish: review`.
+
+Social: nothing was posted. The packet at /articles/what-held-and-what-failed/grok-packet.json is held until Dom releases
+it (set `social_publish` to `auto` and add a `social_request` with `released_by`, then rebuild and redeploy). The private
+psyche-lab x-articles inbox was not written to.
+
+Open: the mapping against the wider living list of indicators (source 5) once its replies can be read; independent cases
+for the two small judgments in row 6; tools/check_editorial_browser.cjs was not run.
