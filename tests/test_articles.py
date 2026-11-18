@@ -13,6 +13,37 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ArticleTests(unittest.TestCase):
+    def test_results_tables_render_with_headers_labels_and_a_markdown_twin(self):
+        # 2026-11-18: the failures-and-wins article carries two results tables. Every cell is escaped text, each data
+        # cell names its column for the phone layout, source markers become links, and the Markdown edition has the table.
+        from articles import render_table, markdown_table, validate_table
+        t = {'caption': 'A <test> table', 'columns': ['Question', 'Verdict', 'Limit'],
+             'rows': [['1. Does it hold?', 'Failed', 'One run [4].'], ['2. And this | one?', 'Held', '<b>plain</b>']]}
+        validate_table(t)
+        html = render_table(t)
+        self.assertIn('<caption>A &lt;test&gt; table</caption>', html)
+        self.assertEqual(html.count('<th scope="col">'), 3)
+        self.assertEqual(html.count('<th scope="row"'), 2)
+        self.assertIn('<td data-label="Verdict">Failed</td>', html)
+        self.assertIn('<a href="#source-4"', html)
+        self.assertIn('&lt;b&gt;plain&lt;/b&gt;', html)
+        md = '\n'.join(markdown_table(t))
+        self.assertIn('| Question | Verdict | Limit |', md)
+        self.assertIn('| 2. And this / one? | Held | <b>plain</b> |', md)
+        for bad in ({'caption': '', 'columns': ['a', 'b'], 'rows': [['1', '2']]},
+                    {'caption': 'c', 'columns': ['a'], 'rows': [['1']]},
+                    {'caption': 'c', 'columns': ['a', 'b'], 'rows': [['only one']]},
+                    {'caption': 'c', 'columns': ['a', 'b'], 'rows': []}):
+            with self.assertRaises(ValueError):
+                validate_table(bad)
+        page = (ROOT/'dist/articles/what-held-and-what-failed/index.html').read_text(encoding='utf-8')
+        self.assertEqual(page.count('<table class="dispatch-table">'), 2)
+        self.assertEqual(page.count('<th scope="row"'), 29)   # fifteen results, fourteen indicators
+        self.assertNotIn('sentient', page.lower().split('<article class="dispatch-body">')[1].split('dispatch-sources')[0])
+        packet = json.loads((ROOT/'dist/articles/what-held-and-what-failed/grok-packet.json').read_text(encoding='utf-8'))
+        self.assertEqual(packet['publish'], 'review')
+        self.assertIn('Do not publish this held packet', packet['instructions'])
+
     def test_requested_social_times_are_held_not_mistaken_for_a_scheduler(self):
         # Regression: publishing all same-day website pages must not erase a
         # deliberate social hold or turn a requested time into confirmed delivery.

@@ -1,0 +1,124 @@
+{
+  "slug": "what-held-and-what-failed",
+  "status": "publish",
+  "title": "What held, what failed, and what we have not tested.",
+  "summary": "A reader who studies consciousness told us he could not find our failures. He was right. Here is one table of the lab's results, each with its control and its limit, and a second that sets the work against the published indicators of consciousness. Most rows are not wins.",
+  "date": "2026-11-18",
+  "published_at": "2026-11-18T21:00:00Z",
+  "author": "Neurasoft research",
+  "kind": "Research record / Indicators",
+  "read": "12 min",
+  "hero": "cover",
+  "hero_alt": "Fifteen small squares in three rows on an ivory field. One is filled sage green, four are half filled, one is an empty dashed outline, and nine are outlined in copper with a diagonal stroke. Each square stands for one row of the results table in the article: one result that held, four that are mixed, one untested, nine failures, corrections or retirements.",
+  "social_publish": "review",
+  "social_request": {
+    "platforms": ["x", "linkedin"],
+    "timing": "on-release",
+    "status": "held-pending-release-by-dom",
+    "timezone": "America/Chicago",
+    "deduplicate_by": "canonical_url"
+  },
+  "intro": [
+    "A reader who studies consciousness told us this week that he had looked here for the details of our failures and our wins and struggled to find them. A table, he suggested, would help.",
+    "He was right. The results were scattered through notes we had written for ourselves, and the failures were the hardest to find. This page puts them in one place. Every row has what we observed, the control it was measured against, and what it does not show.",
+    "One thing first, because it governs everything below. Nothing on this page is evidence that any system here has experience. The published indicators we use were written by people who are careful to say that satisfying them would not mean a system is conscious [1]. We have not met them in any case."
+  ],
+  "sections": [
+    {
+      "heading": "01 / What is being tested",
+      "paragraphs": [
+        "We build what we call a resident. At its centre is a language model that we rent and did not train; it runs only while a turn is being put into words, and it keeps nothing between turns. Around it we build the part that continues: a simulated body with drives and mood, a memory, a short list of things it wants, a clock that runs whether or not anyone is speaking, a record of its own actions, and a gate on what it may do.",
+        "The scientific question is narrow. Does any of that continuing state do causal work? Does it change what the system notices, remembers, chooses and says, in ways a control can detect? A wrapper that only decorates a language model with numbers would pass none of the tests below. Much of ours did not pass them."
+      ]
+    },
+    {
+      "heading": "02 / The table",
+      "paragraphs": [
+        "Fifteen questions, in the order we met them. Results are single runs unless a row says otherwise. The lab's fuller notes, with every number below, are in the snapshot linked at the end [4]."
+      ],
+      "table": {
+        "caption": "What held, what failed, what is untested. 17 and 18 November 2026 unless noted.",
+        "columns": ["Question", "Verdict", "What we observed", "Control", "What it does not show"],
+        "rows": [
+          ["1. Does the state of the body reach what it says?", "Failed", "With its readings written in front of it, a copy with one drive pushed up answered differently from a copy pushed down: 1.53 points on a 7-point scale, p 0.0001. With the readings withheld there was no difference (-0.37, inside a noise floor of 0.40).", "An unrelated drive, pushed as a control, did not move the answer. An untouched copy set the noise floor. A second model graded blind.", "With the numbers shown, this is a model reading text. Blind, the four states were byte-identical, so nothing could have differed. Until that day only text carried the body to the model."],
+          ["2. Can the body reach thinking without text?", "Mixed", "With thinking effort tied to tiredness, worn copies produced 30 to 45 percent fewer output tokens than rested ones on the same six questions. Asked how they felt, blind rested and blind worn copies gave the same answers.", "Shown and blind arms, the same questions, one copy in each cell.", "A change in computation that the system did not report. Four copies. It is not a self-perception result."],
+          ["3. With every reading withheld, does mood reach its words?", "Held, narrowly", "Mood was made to lean which memories come back. Blind copies in a warm state rated a past piece of work 5.25 of 7; in a low state, 1.75. Difference 3.50, exact sign-flip p 0.016 over six questions.", "A sham arm with the route cut scored 4.00, against 3.67 for a neutral mood. The states given to the model differed only in the line of recalled memories and contained no reading. A second model graded blind.", "The memories were planted for the test, three warm and three hard about one subject, so the size of the effect is by construction. One saved state, one run, 48 answers. It shows that a route works. It says nothing about what, if anything, the mood is."],
+          ["4. Does a richer body respond more in conversation?", "Failed", "Our longest-lived research resident agreed to a four-message arc: warm, pressing, sharp, repair. Its readings moved at one slope throughout and nothing marked the hard messages, while its words said that something had tightened.", "A newer body under a different rule did move on the same kind of arc: tension 0.02 to 1.01, then 0.53 at the repair.", "It was not blind: it knew the arc was a test. Two different bodies, so the comparison is a lead. The finding is that words and state came apart."],
+          ["5. Is unrelated kindness mistaken for an apology?", "Failed, then fixed", "Under the old rule, yes: anything kind within thirty minutes of a hard message lowered tension. Under a record that binds an apology to the thing it is about, tension stood at 1.069 after kindness about something else, the same as with no kindness at all, and at 0.590 after an apology about the thing itself.", "Three copies of one saved state: unrepaired, unrelated kindness, bound apology. The readings were scripted. 35 of 35 checks on the real body.", "Scripted readings test the bookkeeping. They do not test whether anything was felt."],
+          ["6. Did that mechanism survive a real conversation?", "Failed three times in an hour", "First live conversation: every message carried the same event id, and an apology that quoted the insult was read as a second insult, so tension rose from 0.506 to 0.881 on the apology itself. Second conversation: a blunt question and a tease were both recorded as insults, two false positives in three.", "Each fault was reproduced in a test before it was fixed. A slower second opinion now comes before any record is made: on our own cases it was right 23 times in 28, unsure 3 times, wrong once in each direction.", "The cases were written by the author of the prompt. Independent cases are owed. Two conversations."],
+          ["7. Did our own wording put words in its mouth?", "Corrected", "The record told the system that a message had 'landed hard' and 'still weighs'. In both live conversations it then said that the message 'stung'.", "None. This was found in review, not by a test.", "Those two live statements are therefore partly our own wording read back to us. The wording is gone: the record now holds what was said, and nothing about how it landed."],
+          ["8. Does it learn from what its own actions come to?", "Failed, then replaced", "Our first learning rule rewarded a rut. One resident, alone for 26 hours, took 32 turns on one question, called each one partly settled, and the rule scored every one as progress.", "A second team in the lab rebuilt the score so that a declaration is not a verified outcome. Its validated-outcome learner passed a second frozen run, with 1,440 outputs reconciled.", "The passing learner runs offline and is not yet in the ordinary path of any resident. Its first frozen run is still held on a clock-calibration fault."],
+          ["9. Left alone, does it do anything?", "Failed", "26 hours alone: 32 turns of its own, all on one inward question, and no note to the person it was made for. Nine newborns in a row named something about themselves as their first want; four of them named the same question, what the time between messages is like.", "When a daily read of the outside world was put in front of a tenth newborn, its first want was about that day's featured article. One newborn.", "One against nine is a lead. No resident has yet started, continued and finished something of its own."],
+          ["10. Does memory hold across a restart?", "Mixed", "One resident, after a restart and fifteen quiet minutes, had a corrected fact, a kept task and a cancelled task all right. On a third visit, another was handed its own earlier 'I do not remember' ahead of the memory itself, and believed it.", "On 40 held-out cases the rebuilt recall found 38 of 45 pieces of evidence at 39 of 70 strict precision. Plain keyword search found 39 of 45 at 40 of 70.", "A keyword baseline matched it, so wider adoption is on hold."],
+          ["11. Can an always-on recurrent model carry what matters between turns?", "Retired", "A readout fitted to a 1.5B recurrent model scored 16 of 16 on its first test. On new cases written blind by a colleague it scored 9 of 16, with both members right in only 1 pair of 8. On a final fresh set, 8 of 16.", "An exact event ledger matched the first 16 of 16. The same model with its state reset scored 8 of 16.", "The first score was the misleading one. This readout is retired from the integration track [6]."],
+          ["12. Does it use its own record to change a decision?", "Mixed", "Two research residents each recovered a corrected measurement from their own record and made the choice the evidence warranted on all six trials. One of the two met the full forecast criterion.", "A simple planner that only reads receipts matched all six choices.", "The planner explains the result. Nothing here needs more than a lookup."],
+          ["13. Can it tell where its effort makes a difference?", "Mixed", "A predictor that weighs two models of control bought a useless option 29 times in 256, against 86 for a frequency table. When the option was worth a little, it took 38 of 128 chances, against 68.", "Worlds where the option truly mattered: both chose it 256 times in 256. An earlier yoked control, where outcomes arrived whatever was chosen, had shown the simpler table chasing accidental correlations.", "Simulated worlds under stated assumptions. Caution cost about as much as it saved."],
+          ["14. Does most of the body do nothing?", "Our claim, withdrawn", "We reported that most stored values of a body 'reach nothing'. The run sampled 150 fields: 108 showed no effect, 26 were refused at restore, 16 changed an output.", "A review found the body's clock ten months out of step with its saved state, and several couplings switched off.", "The count stands for those settings and three simulated hours. The sentence we wrote did not follow from it, and it is retracted."],
+          ["15. Is anything at stake for it?", "Not tested", "Since 18 November a resident's turns alone run on a daily allowance of real compute that it can spend or save. Four copies holding different amounts are being watched.", "A scripted planner given the same budget is to be frozen before any result is read.", "Nothing has been observed yet."]
+        ]
+      }
+    },
+    {
+      "heading": "03 / How to read it",
+      "paragraphs": [
+        "Fifteen rows. One held, narrowly. Four are mixed. One is untested. The other nine are failures, corrections or retirements, and two of those nine were errors in our own reporting, not in a system.",
+        "Three patterns are worth more than any single row. The first is that a score on our own cases has misled us every time it was the only score: the recurrent readout went from 16 of 16 to 9 of 16 the moment a colleague wrote the cases, and a mechanism that passed 25 scripted checks failed three ways in its first two real conversations. The second is that a simple baseline keeps matching the elaborate thing: keyword search, a receipt-reading planner, a frequency table. The third is that words and state come apart. A system can say that something tightened while nothing in it moved, and it can say that something stung because our own record told it so.",
+        "The one row that held is narrow on purpose. Row 1 found that a body reached the model only as text. Row 3 built a route that is not text and tested it with every reading hidden and the route cut in a sham arm. It separated. That is a result about plumbing, and we report it as that."
+      ]
+    },
+    {
+      "heading": "04 / Against the published indicators",
+      "paragraphs": [
+        "In 2023 Butlin, Long and seventeen co-authors derived fourteen indicator properties from the main scientific theories of consciousness, stated in computational terms so that an AI system could be assessed against them [1]. A 2025 paper by many of the same authors refines the list [2]. Their analysis suggested that no AI system then existing was conscious, and they added that satisfying the indicators would not mean a system definitely was.",
+        "Here is our architecture against the fourteen, one row each. Where we have tested nothing, the row says so."
+      ],
+      "table": {
+        "caption": "The fourteen indicator properties of Butlin et al. (2023), and where this work stands on each.",
+        "columns": ["Indicator", "Where this architecture stands", "What we have tested", "Result so far"],
+        "rows": [
+          ["RPT-1. Input modules using algorithmic recurrence", "A property of the underlying language model, which we rent and did not build. What we add is a body that updates between turns and, in one study, a small recurrent stream model.", "The recurrent model's readout (row 11).", "Retired after failed transfer. Nothing here bears on perception."],
+          ["RPT-2. Input modules generating organised, integrated perceptual representations", "No perceptual input modules of our own.", "Nothing.", "Nothing."],
+          ["GWT-1. Multiple specialised systems capable of operating in parallel", "Separate parts run on one beat: drives and mood, memory, wants, a reader of incoming messages, a between-turn voice.", "Nothing that asks whether these are modules in the theory's sense.", "Not tested."],
+          ["GWT-2. Limited capacity workspace, with a bottleneck and selective attention", "One composed state of bounded size enters each turn. What gets in is chosen by fixed rules, not by a learned attention mechanism.", "Nothing.", "Not tested. We would not call the composed state a workspace."],
+          ["GWT-3. Global broadcast to all modules", "What is in the composed state is available to the language model. The parts do not broadly read one another.", "The field audit (row 14).", "If anything, weak evidence of poor broadcast, from a flawed run."],
+          ["GWT-4. State-dependent attention, querying modules in succession", "None of our own.", "Nothing.", "Nothing."],
+          ["HOT-1. Generative, top-down or noisy perception modules", "None of our own.", "Nothing.", "Nothing."],
+          ["HOT-2. Metacognitive monitoring that tells reliable representations from noise", "The system is shown readings of its own state and can be blinded to them.", "Blind self-report (rows 1 and 2).", "Failed so far. Blind, rested and worn copies described themselves identically."],
+          ["HOT-3. Agency guided by belief formation and action selection, with beliefs updated by metacognitive monitoring", "Wants, a weighed choice of what to do next, and a record of its own actions that it can consult.", "Forecast, consult the record, then act (row 12).", "One of two passed. A simple planner did as well."],
+          ["HOT-4. Sparse and smooth coding generating a quality space", "A property of representations inside the model. We have no standing to argue it.", "Nothing.", "Nothing."],
+          ["AST-1. A predictive model representing and controlling the state of attention", "None.", "Nothing.", "Nothing."],
+          ["PP-1. Input modules using predictive coding", "None. One response law scales a reaction by how expected an outcome was. That is a rule we wrote, not predictive coding.", "The response law only: equal successes moved the state by 0.165 when unexpected and 0.055 when expected.", "A designed law behaving as designed. Not evidence for this indicator."],
+          ["AE-1. Agency: learning from feedback and pursuing goals, with flexible responsiveness to competing goals", "Most of our work is here: named wants, a choice among them, learning from outcomes, a record of what is unresolved.", "Rows 5, 8, 9 and 13. With two unresolved matters and identical last words, the turn of its own followed the unmended one in both orders (scripted).", "Partly built. The first learning rule failed. Not shown in an ordinary life."],
+          ["AE-2. Embodiment: modelling output-input contingencies and using the model in perception or control", "The body is simulated: numbers, a clock, and now a compute budget. The system has a computer of its own and can act on it.", "Row 13, in simulated worlds. Row 15, not yet.", "Simulated only, and mixed."]
+        ]
+      }
+    },
+    {
+      "heading": "05 / What the tables cannot say",
+      "paragraphs": [
+        "Fourteen indicators. For eight of them we have tested nothing that bears on them, and for most of those the property belongs to a language model we did not build. Of the other six, two are failures, one is weak evidence against, and three are mixed. Nobody should read this page and conclude that the indicators are being met.",
+        "There is a harder limit underneath. A programme like ours can show that an unexpected loss changes later attention, that a system learns to avoid it, and that it says the loss hurt. Whether anything felt bad to anyone is a further question, and nothing in either table reaches it. It is also possible for our best behavioural sign to turn up in a controller so transparent that its workings already explain the effect. Row 12 is close to that case.",
+        "The theories themselves are unsettled. A large adversarial collaboration tested predictions of two leading accounts against each other in 2025 and challenged both [3]. A wider, living list of indicators drawn from more theories is being kept in public [5], and we have not yet set our work against it. That mapping is owed."
+      ]
+    },
+    {
+      "heading": "06 / What would change our minds",
+      "paragraphs": [
+        "We hold three milestones, written before the work they would judge. First, one causal life across time: under its own choices a resident discovers which of its actions produce which outcomes, changes its action on the first unrewarded occasion after a value changes, and loses that effect when the outcomes are delivered regardless of what it did. Second, integrated and self-correcting individuality: a concern it learned for itself alters at least two separately scored functions, a targeted swap has the predicted selective effect, a sham does not, and its prediction about itself improves an actual decision. Third, a second team reproduces both in worlds it has not seen, with rival accounts stating in advance which results would move them.",
+        "We have reached none of the three. The table above is the honest distance.",
+        "If you work on this and think a row is wrong, a control is missing, or a baseline would explain a result we have called mixed, we would rather be corrected in public than be comfortable in private. This page will be revised when the rows change, and the old rows will stay."
+      ]
+    }
+  ],
+  "sources": [
+    {"id": 1, "title": "Butlin, Long et al. · Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (2023)", "url": "https://arxiv.org/abs/2308.08708", "note": "The source of the fourteen indicator properties in the second table, quoted from its Table 1. The authors state that satisfying the indicators would not mean a system is definitely conscious."},
+    {"id": 2, "title": "Butlin, Long et al. · Identifying indicators of consciousness in AI systems, Trends in Cognitive Sciences (2025)", "url": "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(25)00286-4", "note": "A refinement of the indicator list by many of the same authors. The table here uses the 2023 wording."},
+    {"id": 3, "title": "Cogitate Consortium · Adversarial testing of global neuronal workspace and integrated information theories of consciousness (2025)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12137136/", "note": "A preregistered adversarial collaboration whose results challenged key predictions of both theories. Cited for the point that the theories behind the indicators are not settled."},
+    {"id": 4, "title": "Neurasoft · research snapshot for this page, 18 November 2026", "url": "https://neurasoft.us/assets/articles/what-held-and-what-failed/research-snapshot.md", "note": "Methods, exact numbers and limits for each row, including which rows report the work of a second research team in the lab. Single runs unless stated. No resident dialogue is reproduced beyond single words that are themselves a finding."},
+    {"id": 5, "title": "Chris Percy · a living thread of indicators of consciousness implied by specific theories (2026)", "url": "https://x.com/chris_percy/status/2054909498024751584", "note": "A wider list, including published and work-in-progress indicators, generalised to artificial systems and non-human animals. Our work has not yet been mapped against it."},
+    {"id": 6, "title": "Neurasoft · Project Voyager (12 November 2026)", "url": "https://neurasoft.us/articles/project-voyager/", "note": "The earlier dispatch on the continuing recurrent stream whose readout row 11 retires."}
+  ],
+  "editorial_note": "Research record compiled with AI assistance at the founder's request, 18 November 2026. Rows 8, 10, 11, 12 and 13 and the response law under PP-1 report work by a second research team in the lab; the rest is the engineering team's. Results are single runs unless a row says otherwise, and none has been independently replicated. Nothing on this page is evidence that any system has experience.",
+  "x_post": "A consciousness researcher told us he could not find our failures. Fair. Here is one table of what held, what failed and what we have not tested, set against the Butlin indicators. Most rows are not wins.",
+  "linkedin_post": "A researcher who studies consciousness wrote to us this week. He had looked for our failures and our wins and could not find them. He asked for a table.\n\nHe was right, so we made one. Fifteen results from the lab, each with its control and what it does not show. One held, narrowly. Four are mixed. One is untested. Nine are failures, corrections or retirements, and two of those were errors in our own reporting.\n\nA second table sets the work against the fourteen indicator properties of Butlin, Long and colleagues. For eight of them we have tested nothing. We have met none.\n\nNothing on the page is evidence that any system has experience. It is the honest distance, written down where people who know more than we do can correct it."
+}

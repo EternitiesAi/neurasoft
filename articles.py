@@ -53,6 +53,9 @@ def load_articles(root, today=None):
             raise ValueError('Only one Voyager lab per article is supported')
         for lab in labs:
             article_voyager.validate(lab)
+        for s in a['sections']:
+            if 'table' in s:
+                validate_table(s['table'])
         for name in [a['hero']] + [s['figure'] for s in a['sections'] if 'figure' in s]:
             if not re.fullmatch(r'[a-z0-9-]+', name):
                 raise ValueError('Invalid image name')
@@ -74,8 +77,46 @@ def picture(a, name, alt, cover=False):
     return f'<img class="{"dispatch-cover" if cover else "dispatch-figure"}" src="{src}" alt="{E(alt, quote=True)}" loading="{"eager" if cover else "lazy"}">'
 
 
+def cited(text):
+    return re.sub(r'\[(\d+)\]', r'<sup><a href="#source-\1" aria-label="Source \1">[\1]</a></sup>', E(text))
+
+
 def paragraph(text):
-    return '<p>' + re.sub(r'\[(\d+)\]', r'<sup><a href="#source-\1" aria-label="Source \1">[\1]</a></sup>', E(text)) + '</p>'
+    return '<p>' + cited(text) + '</p>'
+
+
+def validate_table(t):
+    """A results table: a caption, column names, and rows of plain text cells."""
+    if not isinstance(t.get('caption'), str) or not t['caption'].strip():
+        raise ValueError('A table needs a caption')
+    cols = t.get('columns')
+    if not isinstance(cols, list) or len(cols) < 2 or any(not isinstance(c, str) or not c.strip() for c in cols):
+        raise ValueError('A table needs at least two named columns')
+    rows = t.get('rows')
+    if not isinstance(rows, list) or not rows:
+        raise ValueError('A table needs rows')
+    for row in rows:
+        if not isinstance(row, list) or len(row) != len(cols) or any(not isinstance(c, str) for c in row):
+            raise ValueError('Every table row needs one text cell per column')
+
+
+def render_table(t):
+    """Readable on a phone: under 760px each row becomes a labelled card (see articles.css)."""
+    head = ''.join(f'<th scope="col">{E(c)}</th>' for c in t['columns'])
+    body = ''
+    for row in t['rows']:
+        cells = f'<th scope="row" data-label="{E(t["columns"][0], quote=True)}">{cited(row[0])}</th>'
+        cells += ''.join(f'<td data-label="{E(c, quote=True)}">{cited(v)}</td>' for c, v in zip(t['columns'][1:], row[1:]))
+        body += '<tr>' + cells + '</tr>'
+    return (f'<div class="dispatch-table-wrap" role="region" aria-label="{E(t["caption"], quote=True)}" tabindex="0">'
+            f'<table class="dispatch-table"><caption>{E(t["caption"])}</caption><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>')
+
+
+def markdown_table(t):
+    cell = lambda v: v.replace('|', '/').replace('\n', ' ')
+    lines = ['**' + t['caption'] + '**', '', '| ' + ' | '.join(cell(c) for c in t['columns']) + ' |', '|' + '---|' * len(t['columns'])]
+    lines += ['| ' + ' | '.join(cell(v) for v in row) + ' |' for row in t['rows']]
+    return lines + ['']
 
 
 def markdown(a, base):
@@ -92,6 +133,8 @@ def markdown(a, base):
             lines += article_continuity.markdown(s['thought_experiment'])
         if 'voyager_lab' in s:
             lines += article_voyager.markdown(s['voyager_lab'])
+        if 'table' in s:
+            lines += markdown_table(s['table'])
         if 'figure' in s:
             lines += [f"![{s['figure_alt']}]({base}/assets/articles/{a['slug']}/{s['figure']}.png)", '', s['caption'], '']
     lines += ['## Sources', ''] + [f"[{s['id']}] [{s['title']}]({s['url']}) — {s['note']}" for s in a['sources']]
@@ -121,6 +164,8 @@ def finish(b):
                 body += article_continuity.render(s['thought_experiment'])
             if 'voyager_lab' in s:
                 body += article_voyager.render(s['voyager_lab'])
+            if 'table' in s:
+                body += render_table(s['table'])
             if 'figure' in s:
                 body += '<figure><a href="/assets/articles/' + a['slug'] + '/' + s['figure'] + '.svg">' + picture(a,s['figure'],s['figure_alt']) + '</a><figcaption>' + E(s['caption']) + ' Tap the diagram to view it full size.</figcaption></figure>'
         body += '<section class="dispatch-sources"><h2>Sources & further reading</h2><ol>'
