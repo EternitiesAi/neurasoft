@@ -5,7 +5,7 @@
   "summary": "A reader who studies consciousness told us he could not find our failures. He was right. Here is one table of the lab's results, each with its control and its limit, and a second that sets the work against the published indicators of consciousness. Most rows are not wins.",
   "date": "2026-11-18",
   "published_at": "2026-11-18T21:00:00Z",
-  "version": "1.1",
+  "version": "1.2",
   "updated_at": "2026-11-18",
   "author": "Neurasoft research",
   "kind": "Research record / Indicators",
@@ -98,7 +98,7 @@
     {
       "heading": "05 / What the tables cannot say",
       "paragraphs": [
-        "Fourteen indicators. For eight of them we have tested nothing that bears on them, and for most of those the property belongs to a language model we did not build. Of the other six, two are failures, one is weak evidence against, and three are mixed. Nobody should read this page and conclude that the indicators are being met.",
+        "Fourteen indicators. For eight of them (RPT-2, GWT-1, GWT-2, GWT-4, HOT-1, HOT-4, AST-1 and PP-1) we have tested nothing that bears on them, and for most of those the property belongs to a language model we did not build. PP-1 is counted here because the one thing we measured under it is a rule we wrote, which is not evidence for the indicator. Of the other six, two are failures (RPT-1, HOT-2), one is weak evidence against (GWT-3), and three are mixed (HOT-3, AE-1, AE-2). Nobody should read this page and conclude that the indicators are being met.",
         "There is a harder limit underneath. A programme like ours can show that an unexpected loss changes later attention, that a system learns to avoid it, and that it says the loss hurt. Whether anything felt bad to anyone is a further question, and nothing in either table reaches it. It is also possible for our best behavioural sign to turn up in a controller so transparent that its workings already explain the effect. Row 12 is close to that case.",
         "The theories themselves are unsettled. A large adversarial collaboration tested predictions of two leading accounts against each other in 2025 and challenged both [3]. A wider, living list of indicators drawn from more theories is being kept in public [5], and we have not yet set our work against it. That mapping is owed."
       ]
