@@ -83,3 +83,19 @@ psyche-lab x-articles inbox was not written to.
 
 Open: the mapping against the wider living list of indicators (source 5) once its replies can be read; independent cases
 for the two small judgments in row 6; tools/check_editorial_browser.cjs was not run.
+
+## Revision 1.1, the same evening
+
+After publication an independent review of the day's code (a second model given the code and none of the author's
+conclusions) found that the two small judgments in row 6 had been awaited inside the step that composes the system's state,
+under a 1.5 second limit; the run journals confirmed five replies in the two live conversations composed without that state.
+The page was revised rather than left: row 6 now says so and that those replies are not to be read as the system speaking
+from its state; the second opinion's later score replaces the earlier one (34 of 36, no false positive, one real insult
+missed twice); rows 9 and 15 carry first looks; the snapshot carries the same. The URL, date and packet identity are kept;
+version 1.1.
+
+Source 30615fc. Preview https://af1d6513.neurasoft-research.pages.dev passed tools/verify_release.py (225 files).
+Production deployment https://682b2654.neurasoft-research.pages.dev. https://neurasoft.us passed
+tools/verify_proxied_release.py (225 byte-exact, no mismatch) and serves "Version 1.1". Receipts:
+artifacts/indicators-v1.1-preview.json, artifacts/indicators-v1.1-domain.json. 60 Python tests passed before deployment.
+Social posting is still held.
