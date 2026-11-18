@@ -53,8 +53,14 @@ the lab, reported from its own records. The remaining rows are the engineering t
    and a tease were recorded as insults (two of three). After the fixes, in the second conversation: kindness about
    another subject left tension at 1.02, and an apology quoting the insult took it from 1.016 to 0.535. A second opinion
    now precedes any record. On fourteen cases written by the prompt's author, each run twice: 23 right, 3 unsure (no
-   record made), 1 false positive, 1 miss. The judge that binds an apology scored 32 of 32 on sixteen such cases twice.
+   record made), 1 false positive, 1 miss. After the prompt was tightened against softened insults and injected
+   instructions, on eighteen cases twice: 34 right, no false positive, one real insult missed both times. The judge that binds an apology scored 32 of 32 on sixteen such cases twice.
    These are development scores. Independent cases have been requested from the second team.
+   Added in version 1.1: an independent review of the day's code (a second model given the code and none of the author's
+   conclusions) found that the judgments were awaited inside the step that composes the system's state, under a 1.5
+   second limit. The run journals confirmed five replies in these two conversations composed with no state at all, on
+   the insult and apology messages. The judgment now follows the step and is never awaited by it. Those five replies
+   are not evidence of anything about the state.
 7. **A confound we introduced.** The state shown to the system described a recorded message as having "landed hard" and
    said how much it "still weighs". Both live systems later said the message "stung". The wording was removed after a
    review of the design; the record now carries the words said and nothing about their effect.
@@ -96,7 +102,9 @@ the lab, reported from its own records. The remaining rows are the engineering t
     stream, the reader and dreams switched off. The conclusion is withdrawn; the count stands for those settings only.
 15. **Energy.** From 18 November a resident's turns alone draw on a daily allowance of the compute they actually cost,
     with unspent allowance carried for up to two days and a lower ceiling on thinking effort when little is left. Four
-    copies of one state with different allowances, shown or withheld, are being observed. No result.
+    copies of one state: allowance full or nearly spent, state shown or withheld. First turn each (version 1.1): the
+    nearly spent copy that was shown its state used one tool and said it would rest; the nearly spent copy with its
+    state withheld behaved like the two full ones. One copy per cell. A first look only.
 
 ## The indicators
 
