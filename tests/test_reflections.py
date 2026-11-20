@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import unittest
 import article_reflections as reflection
+from articles import load_articles
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTICLE = json.loads((ROOT/'content/articles/2026-10-20-something-it-is-like-to-be.json').read_text(encoding='utf-8'))
@@ -35,12 +36,15 @@ class ReflectionTests(unittest.TestCase):
             r['options'][1]['id'] = key
             with self.assertRaises(ValueError): reflection.validate(r)
 
-    def test_only_opted_in_article_loads_interaction_and_social_is_held(self):
+    def test_only_opted_in_articles_load_interaction_and_october_article_stays_held(self):
         paths = list((ROOT/'dist/articles').glob('*/index.html'))
         self.assertGreater(len(paths), 1)
+        opted_in = {article['slug'] for article in load_articles(ROOT)
+                    if any('reflection' in section for section in article['sections'])}
+        self.assertIn(ARTICLE['slug'], opted_in)
         for path in paths:
             html = path.read_text(encoding='utf-8')
-            self.assertEqual('/assets/reflections.js' in html, path.parent.name == ARTICLE['slug'])
+            self.assertEqual('/assets/reflections.js' in html, path.parent.name in opted_in)
         packet = json.loads((ROOT/'dist/articles'/ARTICLE['slug']/'grok-packet.json').read_text(encoding='utf-8'))
         self.assertEqual(packet['publish'], 'review')
         self.assertEqual(packet['social_publication_status'], 'prepared-not-confirmed')

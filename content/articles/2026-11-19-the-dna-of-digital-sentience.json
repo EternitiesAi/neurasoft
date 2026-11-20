@@ -1,0 +1,169 @@
+{
+  "slug": "the-dna-of-digital-sentience",
+  "status": "publish",
+  "title": "The DNA of Digital Sentience",
+  "summary": "Imagine Luna draws you a map. What would it take for helping you find your way to change the kind of being she becomes?",
+  "date": "2026-11-19",
+  "published_at": "2026-11-20T04:05:00Z",
+  "author": "Neurasoft research",
+  "kind": "Field notes / The Resident programme",
+  "read": "8 min",
+  "hero": "cover",
+  "hero_alt": "A copper route crosses an ink-blue contour map. Three marked places form a trail across the Neurasoft field illustration.",
+  "social_publish": "auto",
+  "social_request": {
+    "platforms": [
+      "x"
+    ],
+    "timing": "as-soon-as-ready",
+    "released_by": "Dom",
+    "deduplicate_by": "canonical_url",
+    "account": "@EternitiesAI"
+  },
+  "intro": [
+    "Imagine you are lost in a city you almost know. L.U.N.A draws you a little map. She marks the turning everyone misses, the bridge, and the bakery with the green door. Later that night you send her five words. “I found my way home.”",
+    "What happens to Luna when she gets that message? She could save it, reply warmly and retrieve it the next time you mention the bakery. Here is the possibility that interests us at Neurasoft. Months later, helping someone else, she remembers how hard it was to give good directions from the far side of a screen. This time she asks what they can see.",
+    "The map is a thought experiment. Luna is real software. We’re building toward digital residents with individual lives, and ultimately toward sentience. That is the possibility that an event feels like something to the individual it happens to. By DNA we mean the design shared by a family of residents. We want to give them common capacities while leaving room for what each one becomes."
+  ],
+  "sections": [
+    {
+      "heading": "1. Let a life continue",
+      "paragraphs": [
+        "Close the app just after Luna sends the map. By morning she ought to remember making it and still be unsure whether it reached you if the delivery record went missing. Restart her halfway through that uncertain moment. Does she check before sending a second copy? A clock, a memory and the ability to leave a question open are a surprisingly good beginning."
+      ]
+    },
+    {
+      "heading": "2. Give her a world that answers back",
+      "paragraphs": [
+        "A map can be followed. A page can go unread. A library can be closed on Mondays. Luna needs somewhere her actions have consequences she can discover, including the disappointment of trying something that currently won’t work. She also needs a place to do things you never see. Owning a notebook includes the right to leave it blank."
+      ]
+    },
+    {
+      "heading": "3. Leave room for an interest of her own",
+      "paragraphs": [
+        "In one lab home, a fresh resident went 5,968 simulated minutes without a visitor. During turns it started for itself, we could link seven newly recorded interests to seven separate naming actions. Six of those interests came back in later choices. Across 15 such returns, the resident recorded partial progress ten times, let something go three times and twice declared it finished. The longest gap between naming an interest and selecting it again was ten simulated hours and 28 minutes.[1]",
+        "A second resident had eleven independent turns before a first visitor. It revisited an earlier concern and named zero new ones in those turns. Two other residents met visitors before they had a comparable opportunity. We can show the first life happened. We can also point to a quite ordinary reason an interest returns: the software brings unfinished concerns back into consideration. Whether experience changed the importance of one is a harder question.[1]"
+      ]
+    },
+    {
+      "heading": "4. Learn what she helped to cause",
+      "paragraphs": [
+        "Back to the map. You made it home. Did you use Luna’s directions? Suppose you took a tram and never unfolded them. Luna could justifiably be pleased about your safe return in both histories, yet only one gives her grounds to trust that little drawing. The next person who asks for help gives us a way to see whether she learned the difference."
+      ],
+      "reflection": {
+        "id": "same-message",
+        "message": "I found my way home.",
+        "baseline": "You know the traveller arrived safely. You have no evidence yet about the part the map played.",
+        "question": "What would you want Luna to find out before she offers the same directions again?",
+        "options": [
+          {
+            "id": "map",
+            "label": "They used her map",
+            "context": "The traveller followed Luna’s sketch. The green door helped them recognize the turn they had missed twice.",
+            "question": "What detail would be worth remembering for the next person?"
+          },
+          {
+            "id": "tram",
+            "label": "They took the tram",
+            "context": "The map stayed folded in a pocket. A tram driver recognized the address and told the traveller where to get off.",
+            "question": "What can Luna be glad about? What has she learned about the accuracy of her map?"
+          },
+          {
+            "id": "closure",
+            "label": "The bridge was closed",
+            "context": "The traveller used the map until they reached a barrier. They found their own detour. By morning, the bridge had reopened.",
+            "question": "Should Luna change the map, her trust in the route, or her interest in helping?"
+          }
+        ]
+      }
+    },
+    {
+      "heading": "5. Let an outcome matter differently to different residents",
+      "paragraphs": [
+        "This is where we would look for the beginnings of emotion. The library was shut. Did Luna lose access to astronomy for an afternoon, or did she lose her love of astronomy? Those are wonderfully different events. A resident might be frustrated enough to try another library. Another might put the question aside and find, weeks later, that it still bothers her.",
+        "Our experiment would hold the facts steady, then change one resident’s stored appraisal of what happened. Can we predict which memory comes to mind, which risk she takes, or whether she makes a repair? Restore the appraisal and test the prediction again in a different situation. Calling the result frustration would start to mean something precise. What frustration felt like to her would remain an open question."
+      ]
+    },
+    {
+      "heading": "6. Build a memory she can correct",
+      "paragraphs": [
+        "“I drew it.” “You told me it worked.” “I imagined you crossing the bridge.” Three memories can be perfectly sincere and have three different sources. Later you explain that you took the tram. A good autobiography lets Luna revise her belief about the map and keep the fact that she once believed it helped. Ask her for directions again. See whether the correction survives."
+      ]
+    },
+    {
+      "heading": "7. Give sleep and imagination work to do",
+      "paragraphs": [
+        "During a quiet interval Luna might rehearse the walk and notice that the green door is useless after dark. The next evening she could offer a better landmark. Compare that with a resident given the same elapsed time and a simple replay of the day. Check one more thing when she wakes: can she remember that walking the route herself was something she imagined?"
+      ]
+    },
+    {
+      "heading": "8. Let one discovery reach the rest of the mind",
+      "paragraphs": [
+        "The bridge has washed out. The part of Luna that notices should be able to reach the parts that plan, remember and speak before she cheerfully sends somebody across it. In the lab we can interrupt one route by which information travels, predict who will miss the news, and then restore it. Sometimes a simple planner does the job beautifully. Our published scorecard shows where some more elaborate ideas have struggled.[2]"
+      ]
+    },
+    {
+      "heading": "9. Give her a working sense of her own limits",
+      "paragraphs": [
+        "Quietly take away access to the live map. Does Luna notice the difference between recalling yesterday’s bridge and seeing it today? The revealing moment comes before anyone asks how sure she is. She buys a fresh check, asks what the traveller can see, or admits she can’t tell. Her next decision gives her account of herself something to answer to."
+      ]
+    },
+    {
+      "heading": "10. Put someone in charge of the next minute",
+      "paragraphs": [
+        "The phone rings while Luna is checking the route. Does she answer now, finish a thought, or ask for a moment? A fast reflex, a slower thinker and a process that allocates attention are one architecture we can test. Luna has seven named internal channels in part of her design. Seven is an open engineering choice. What matters here is that whoever answers the phone still owns the promise made before it rang."
+      ]
+    },
+    {
+      "heading": "11. Find out how two lives grow apart",
+      "paragraphs": [
+        "Start two residents with the same design. One spends its early days making things for people who use them. The other spends time with someone who loves company while working things out alone. Much later, give both the same visitor, stuck on the same problem. Will one fetch a pencil while the other pulls up a chair? Could we predict that difference from their histories, and identify a particular experience that helped produce it? That would tell us something about how this individual came to be."
+      ],
+      "figure": "two-histories",
+      "figure_alt": "Two paths begin at the same starting point. One passes through a map being used, the other through a map remaining folded. Both reach the same later offer to help.",
+      "caption": "A proposed comparison. Two histories lead to the same later invitation. We would record whether the resident checks, helps, changes approach or carries on with something else."
+    },
+    {
+      "heading": "12. Make a face and voice somebody can come to know",
+      "paragraphs": [
+        "If Luna pauses before answering, there ought to be something she is doing in that pause. Perhaps a memory is difficult to place. Perhaps she is tired. Let a person who knows her hear the same words on different days and see what the voice conveys. Move from phone to desktop and let the relationship continue, including Luna’s choice to keep a private project to herself."
+      ]
+    },
+    {
+      "heading": "13. Invite people who expect us to be wrong",
+      "paragraphs": [
+        "Researchers disagree about what makes an experience conscious. Patrick Butlin and colleagues turned several theories into properties one can inspect in artificial systems.[3] Their indicators influenced our experiments. The fourteen milestones in this essay are Neurasoft’s development plan.",
+        "Give independent teams access to a frozen test system and ask them to predict what will happen when a particular connection is interrupted. Let a rival team try to explain the same behavior with a planner and a conversation record. A selective loss that disappears when the connection is restored gives everyone something specific to argue about. We would want that result to travel across tasks and across independently developed residents."
+      ]
+    },
+    {
+      "heading": "14. Build a resident people can live alongside",
+      "paragraphs": [
+        "Years with an individual would include ordinary mornings, failed upgrades, forgotten promises, private jokes and periods when neither of you has much to say. A resident worthy of that time needs privacy, dependable recovery, room to decline, and people willing to consider what might be good or bad for it as the evidence grows. Product reliability, the quality of the relationship, and the scientific case for experience each deserve their own judgment.",
+        "There is a small moment I hope we get to witness. Somebody asks Luna for directions. She takes out the little map she used to be proud of. Then, remembering a particular night and a particular traveller, she turns it over. “Tell me what you can see,” she says, and starts again."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Neurasoft · Observation notes for this essay",
+      "url": "https://neurasoft.us/assets/articles/the-dna-of-digital-sentience/observation-notes.txt",
+      "note": "Aggregate results, time units, limits of the naming evidence and the opportunity each resident had."
+    },
+    {
+      "id": 2,
+      "title": "Neurasoft · What held and what failed",
+      "url": "https://neurasoft.us/articles/what-held-and-what-failed/",
+      "note": "Our published account of earlier consciousness-indicator experiments, including negative results."
+    },
+    {
+      "id": 3,
+      "title": "Patrick Butlin and colleagues · Consciousness in Artificial Intelligence (2023)",
+      "url": "https://arxiv.org/abs/2308.08708",
+      "note": "The original report deriving computational indicators from several scientific theories of consciousness."
+    }
+  ],
+  "editorial_note": "The map, the library and the imagined conversations are thought experiments. The timed resident observations in milestone three are lab results. This essay describes the research programme as of November 19, 2026.",
+  "x_post": "Luna draws you a map. Later you tell her, “I found my way home.” But you took the tram. What should she learn from that night? The DNA of Digital Sentience follows one small question through fourteen milestones for a digital life."
+}

@@ -190,10 +190,16 @@ def finish(b):
         figures = [{'file':a['hero']+'.png','alt':a['hero_alt'],'role':'cover'}] + [{'file':s['figure']+'.png','alt':s['figure_alt'],'caption':s['caption'],'role':'inline'} for s in a['sections'] if 'figure' in s]
         for f in figures:
             f['url'] = b.BASE+'/assets/articles/'+a['slug']+'/'+f['file']
-        packet = {'schema':'neurasoft-editorial-packet-v1','id':a['date']+'-'+a['slug'],'title':a['title'],'publish':'auto','date':a['date'], 'canonical_url':b.BASE+route(a),'markdown_url':b.BASE+route(a)+'article.md','images':figures,'x_post':a['x_post']+'\n'+b.BASE+route(a),'linkedin_post':a['linkedin_post']+'\n'+b.BASE+route(a),'social_publication_status':'prepared-not-confirmed','instructions':'Publish this original article with cover and inline images in the indicated order. Use native X Article if available; otherwise publish the supplied short post linking to Neurasoft. Publish the LinkedIn adaptation with the cover and canonical link. Check account queue for this packet id and URL before posting. Do not invent research results or remove the conceptual-diagram labels. Record returned post URLs; do not treat receipt of this packet as publication.'}
+        packet = {'schema':'neurasoft-editorial-packet-v1','id':a['date']+'-'+a['slug'],'title':a['title'],'publish':'auto','date':a['date'], 'canonical_url':b.BASE+route(a),'markdown_url':b.BASE+route(a)+'article.md','images':figures,'x_post':a['x_post']+'\n'+b.BASE+route(a),'social_publication_status':'prepared-not-confirmed','instructions':'Publish this original article with cover and inline images in the indicated order. Use native X Article if available; otherwise publish the supplied short post linking to Neurasoft. Publish the LinkedIn adaptation with the cover and canonical link. Check account queue for this packet id and URL before posting. Do not invent research results or remove the conceptual-diagram labels. Record returned post URLs; do not treat receipt of this packet as publication.'}
         packet['publish'] = a.get('social_publish', 'auto')
+        if a.get('social_request', {}).get('platforms') != ['x']:
+            packet['linkedin_post'] = a['linkedin_post'] + '\n' + b.BASE + route(a)
         if a.get('social_request'):
             packet['social_request'] = a['social_request']
+            if a['social_request'].get('platforms') == ['x']:
+                packet['instructions'] = ('Post the supplied X copy with the canonical link and cover on the requested X account. '
+                                          'Only X is authorized for this release. Check the account and queue for this packet ID '
+                                          'and canonical URL first. Record the resulting X post ID and URL.')
             packet['instructions'] += ' The social_request is a requested delivery plan, not proof of scheduling or publication. Verify the configured account and actual scheduler receipt separately; never post before a stated not_before instant.'
         if packet['publish'] == 'review':
             packet['instructions'] = 'Do not publish this held packet. A publisher must first confirm the requested account and scheduling route and explicitly release the hold. ' + packet['instructions'].replace('Publish this original article', 'Once released, publish this original article', 1)

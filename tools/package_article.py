@@ -18,10 +18,15 @@ shutil.copy2(source/'article.md',out/'article.md')
 for image in packet['images']:
     shutil.copy2(ROOT/'dist/assets/articles'/slug/image['file'],out/image['file'])
 (out/'x-post.txt').write_text(packet['x_post']+'\n',encoding='utf-8')
-(out/'linkedin-post.txt').write_text(packet['linkedin_post']+'\n',encoding='utf-8')
+if 'linkedin_post' in packet:
+    (out/'linkedin-post.txt').write_text(packet['linkedin_post']+'\n',encoding='utf-8')
 (out/'README.md').write_text('# Ready for Grok Bot\n\n'+packet['title']+'\n\n'+packet['instructions']+'\n\nCanonical: '+packet['canonical_url']+'\n\nFull text: article.md. Image order, captions and alt text: grok-packet.json.\n\nPrepared does not mean socially published. Record post URLs after publication.\n',encoding='utf-8')
 archive=out.with_suffix('.zip')
+files = ['README.md', 'grok-packet.json', 'article.md', 'x-post.txt']
+files.extend(image['file'] for image in packet['images'])
+if 'linkedin_post' in packet:
+    files.append('linkedin-post.txt')
 with ZipFile(archive,'w',ZIP_DEFLATED) as z:
-    for p in sorted(out.iterdir()):
-        if p.is_file(): z.write(p,p.name)
+    for name in sorted(files):
+        z.write(out/name, name)
 print(archive)

@@ -13,6 +13,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ArticleTests(unittest.TestCase):
+    def test_x_only_release_has_one_destination_and_no_linkedin_copy(self):
+        root = ROOT/'dist/articles/the-dna-of-digital-sentience'
+        packet = json.loads((root/'grok-packet.json').read_text(encoding='utf-8'))
+        self.assertEqual(packet['social_request']['platforms'], ['x'])
+        self.assertEqual(packet['social_request']['account'], '@EternitiesAI')
+        self.assertEqual(packet['publish'], 'auto')
+        self.assertEqual(packet['social_publication_status'], 'prepared-not-confirmed')
+        self.assertNotIn('linkedin_post', packet)
+        self.assertNotIn('linkedin', packet['instructions'].lower())
+        self.assertIn(packet['canonical_url'], packet['x_post'])
+
     def test_results_tables_render_with_headers_labels_and_a_markdown_twin(self):
         # 2026-11-18: the failures-and-wins article carries two results tables. Every cell is escaped text, each data
         # cell names its column for the phone layout, source markers become links, and the Markdown edition has the table.
